@@ -1,8 +1,12 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
-@import "tw-animate-css";
+
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
+
+body {
+   font-family: "Geist", sans-serif;
+}
 
 /* ─────────────────────────────────────────────────────────────
    Design Tokens · Cosmiforce Marketing Site
@@ -15,17 +19,10 @@
 
 :root {
    /* ————— Brand Blue & accents ————— */
-   --brand-h: 228; /* hue (≈ royal-blue)          */
-   --brand-s: 95%;
-   --brand-l: 56%; /* .500 – main interactive     */
-   --brand-l-dark: 64%; /* slightly brighter in dark   */
-
-   --accent-h: 258; /* violet / lavender sections  */
-   --accent-s: 100%;
-   --accent-l: 97%; /* hero stripe BG (#F4F3FF)    */
+   --primary: #272ea7;
+   --text: #565656;
 
    /* Primacy */
-   --primary: #272ea7;
 
    /* ————— Neutral greys (Radix-inspired) ————— */
    --gray-0: 0 0% 100%; /* #FFFFFF */
@@ -72,8 +69,9 @@
    --color-surface-alt: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
    --color-border: hsl(var(--gray-200));
 
-   --color-primary: "red";
+   --color-primary: var(--primary);
    --color-primary-fg: hsl(var(--gray-0));
+   --color-text: var(--text);
 
    --color-heading: hsl(var(--gray-900));
    --color-body: hsl(var(--gray-700));

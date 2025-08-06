@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const HeroNew = () => {
    return (
       <div className="min-h-screen pt-7 px-4 lg:px-0">
@@ -10,12 +12,12 @@ const HeroNew = () => {
                   <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-gradient-to-r from-[#F5F5F5] to-[#EEEEFF] border border-[#E0E0FF]">
                      <div className="relative">
                         <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                        <div className="absolute inset-0 w-2 h-2 bg-[#272EA7] rounded-full animate-ping opacity-75"></div>
+                        <div className="absolute inset-0 w-2 h-2 bg-primary rounded-full animate-ping opacity-75"></div>
                      </div>
-                     <span className="text-[14px] font-medium text-[#272EA7]">
+                     <span className="text-[14px] font-medium text-primary">
                         We are launching v0
                      </span>
-                     <div className="bg-[#272EA7] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                     <div className="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
                         NEW
                      </div>
                   </div>
@@ -25,17 +27,17 @@ const HeroNew = () => {
                      solutions, One click at a time.
                   </h1>
 
-                  <p className="text-[14px] sm:text-[16px] mt-4 text-[#8487B2] font-normal">
+                  <p className="text-[14px] sm:text-[16px] mt-4 text-text font-normal">
                      Streamlining healthcare services to meet your needs...
                   </p>
 
-                  <a
+                  <Link
                      target="_blank"
-                     className="mt-4 bg-[#272EA7] text-white rounded-full inline-block py-[12px] sm:py-[14px] px-[32px] sm:px-[40px] shadow-lg shadow-[#DADCFF]/60 hover:shadow-xl hover:shadow-[#DADCFF]/60 transition-all duration-300 hover:-translate-y-1 text-[14px] sm:text-[16px]"
+                     className="mt-4 bg-primary text-white rounded-full inline-block py-[12px] sm:py-[14px] px-[32px] sm:px-[40px] shadow-lg shadow-[#DADCFF]/60 hover:shadow-xl hover:shadow-[#DADCFF]/60 transition-all duration-300 hover:-translate-y-1 text-[14px] sm:text-[16px]"
                      href="https://dashboard.cosmicforge-healthnet.com/auth/register"
                   >
                      Get Started
-                  </a>
+                  </Link>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 lg:mt-12 gap-6 lg:gap-4">
                      <div>
@@ -50,7 +52,7 @@ const HeroNew = () => {
                            <h1 className="text-black text-[15px] sm:text-[16px] font-semibold">
                               Your practice, your price
                            </h1>
-                           <p className="text-[13px] sm:text-[14px] text-[#565656]">
+                           <p className="text-[13px] sm:text-[14px] text-text">
                               Charge exactly what your expertise is worth—update consultation fees
                               in seconds and keep 100% of your earnings.
                            </p>
@@ -68,7 +70,7 @@ const HeroNew = () => {
                            <h1 className="text-black text-[15px] sm:text-[16px] font-semibold">
                               Save more, worry less
                            </h1>
-                           <p className="text-[13px] sm:text-[14px] text-[#565656]">
+                           <p className="text-[13px] sm:text-[14px] text-text">
                               Join our monthly subscription to unlock unlimited visits, automatic
                               discounts on every appointment, and priority booking.
                            </p>
@@ -108,7 +110,7 @@ const HeroNew = () => {
                                        </div>
                                     </div>
                                  </div>
-                                 <div className="bg-[#272EA7] backdrop-blur-sm text-[10px] sm:text-[11px] lg:text-[13px] text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 rounded-full font-medium transition-all shadow-lg">
+                                 <div className="bg-primary backdrop-blur-sm text-[10px] sm:text-[11px] lg:text-[13px] text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 rounded-full font-medium transition-all shadow-lg">
                                     Check Rates
                                  </div>
                               </div>

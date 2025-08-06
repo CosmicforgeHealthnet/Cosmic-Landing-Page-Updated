@@ -68,20 +68,15 @@ const SpecialistSection = () => {
    ];
 
    const SpecialtyCard = ({ specialty, index }) => (
-      <Link
+      <div
          key={`${specialty.name}-${index}`}
-         href={`/specialties/${specialty.name.toLowerCase().replace(/\s+/g, "-")}`}
+         // href={`/specialties/${specialty.name.toLowerCase().replace(/\s+/g, "-")}`}
          className="bg-[#ECECFF] px-6 py-4 mx-3 min-w-[180px]  flex flex-col items-center justify-center rounded-full border border-[#9096F8] hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group"
       >
-         {/* <div
-        className={`w-12 h-12 rounded-full bg-gradient-to-br ${specialty.color} flex items-center justify-center text-white text-xl mb-3 group-hover:scale-110 transition-transform duration-300`}
-      >
-        {specialty.icon}
-      </div> */}
          <h3 className="text-gray-800 font-medium text-sm text-center leading-tight group-hover:text-indigo-600 transition-colors duration-300">
             {specialty.name}
          </h3>
-      </Link>
+      </div>
    );
 
    return (
