@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ const Header = () => {
                isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
             }`}
          >
-            <div className="max-w-[1100px] mx-auto px-6">
+            <div className="max-w-[1100px] mx-auto px-4">
                <div className="flex items-center justify-between h-20">
                   {/* Logo */}
                   <div className="flex items-center space-x-2">
@@ -60,24 +61,25 @@ const Header = () => {
                   {/* Desktop Navigation */}
                   <nav className="hidden lg:flex items-center space-x-8">
                      {navItems.map((item) => (
-                        <a
+                        <Link
                            key={item.name}
+                           prefetch
                            href={item.href}
                            className="text-gray-700 hover:text-[#272EA7] font-medium transition-colors duration-200 relative group"
                         >
                            {item.name}
                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#272EA7] transition-all duration-300 group-hover:w-full"></span>
-                        </a>
+                        </Link>
                      ))}
                   </nav>
 
                   {/* Desktop CTA Button */}
-                  <a
+                  <Link
                      href="https://dashboard.cosmicforge-healthnet.com/auth/register"
-                     className="hidden lg:block bg-[#272EA7] text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                     className="hidden lg:block bg-[#272EA7] text-white px-6 py-3 rounded-[10px] font-semibold hover:bg-indigo-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
                   >
                      Get Started
-                  </a>
+                  </Link>
 
                   {/* Mobile Menu Button */}
                   <button
