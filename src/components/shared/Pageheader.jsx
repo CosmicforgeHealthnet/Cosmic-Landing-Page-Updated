@@ -17,7 +17,7 @@ const PageHeader = ({
          <div className="bg-[#03C800] w-[400px] h-[400px] blur-[100px] absolute top-0 right-[-8rem]"></div>
 
          <div className="max-w-[1100px] h-full flex items-center mx-auto w-full px-4">
-            <div className="space-y-4 relative z-10 flex items-center ">
+            <div className="space-y-4 relative z-10  ">
                <h1 className={`${titleSize} font-bold ${titleColor} leading-tight`}>{title}</h1>
                {subtitle && (
                   <p className={`${subtitleSize} ${subtitleColor} max-w-3xl`}>{subtitle}</p>

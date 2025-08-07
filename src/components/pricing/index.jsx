@@ -3,6 +3,9 @@ import { PRICING_PLANS } from "@/data/pricing";
 import React, { useState } from "react";
 import { Switch } from "../ui/switch";
 import { PricingCard } from "../shared/PricingCard";
+import { isPopularPlan } from "@/utils/pricing";
+import { Button } from "../ui/button";
+import PageHeader from "../shared/Pageheader";
 
 const PricingIndex = () => {
    const [userType, setUserType] = useState("patient");
@@ -18,15 +21,13 @@ const PricingIndex = () => {
    return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-green-50">
          {/* Page Header */}
-         <header className="w-full py-20 px-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-300">
-            <div className="max-w-[1100px] px-4 mx-auto text-center">
-               <h1 className="text-5xl lg:text-6xl font-bold text-black mb-6">Pricing Plans</h1>
-               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                  Choose the perfect plan for your healthcare journey. Affordable, transparent
-                  pricing with no hidden fees.
-               </p>
-            </div>
-         </header>
+
+         <PageHeader
+            title="Pricing Plans"
+            subtitle="Choose the perfect plan for your healthcare journey. Affordable, transparent
+                  pricing with no hidden fees."
+            // gradient="from-blue-400 via-purple-400 to-green-300"
+         />
 
          {/* Main Content */}
          <div className="w-full py-16 px-6">

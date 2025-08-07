@@ -1,3 +1,6 @@
+import { Check } from "lucide-react";
+import { Button } from "../ui/button";
+
 const { getDescription, formatPrice } = require("@/utils/pricing");
 
 export const PricingCard = ({ plan, isPopular = false }) => (
