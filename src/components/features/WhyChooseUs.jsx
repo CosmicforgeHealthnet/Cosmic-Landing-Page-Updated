@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function WhyChooseUs() {
+  const router = useRouter();
   const whyChooseUs = [
     {
       id: 1,
@@ -147,9 +150,9 @@ function WhyChooseUs() {
   };
 
   return (
-    <section className="bg-[#010F42] h-[900px] overflow-hidden">
+    <section className="bg-[#010F42]  overflow-hidden">
       <motion.div
-        className="grid md:grid-cols-2 items-center justify-center gap-5 max-w-[1100px] mx-auto py-20 px-10 pt-10 md:pt-60"
+        className="grid md:flex md:justify-between  items-center justify-center gap-15 max-w-[1100px] mx-auto py-20 px-10 pt-10 md:pt-60"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -157,7 +160,10 @@ function WhyChooseUs() {
       >
         {/* Left Content */}
         <div className="flex flex-col gap-4 text-white">
-          <motion.h1 className="text-5xl mb-10" variants={titleVariants}>
+          <motion.h1
+            className="text-5xl mb-10 font-bold"
+            variants={titleVariants}
+          >
             Why <span className="text-[#DBDDF5]">Choose Us</span>
           </motion.h1>
 
@@ -172,7 +178,7 @@ function WhyChooseUs() {
               }}
             >
               <motion.h2
-                className="text-2xl mb-2"
+                className="text-lg md:text-2xl font-semibold  mb-2"
                 whileHover={{
                   color: "#DBDDF5",
                   transition: { duration: 0.3 },
@@ -196,38 +202,24 @@ function WhyChooseUs() {
             </motion.div>
           ))}
 
-          <motion.div
-            className="flex gap-4 mt-6"
-            variants={buttonContainerVariants}
-          >
-            <motion.div variants={buttonVariants}>
-              <Button
-                className="rounded-2xl text-[#9096F8] bg-white hover:bg-transparent hover:border-1 border-white cursor-pointer"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 5px 15px rgba(255, 255, 255, 0.2)",
-                  transition: { duration: 0.2 },
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Join as Patient
-              </Button>
-            </motion.div>
-            <motion.div variants={buttonVariants}>
-              <Button
-                className="rounded-2xl text-white bg-[#9096F8] cursor-pointer"
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "#7B82F0",
-                  boxShadow: "0 5px 15px rgba(144, 150, 248, 0.4)",
-                  transition: { duration: 0.2 },
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Join as Doctor
-              </Button>
-            </motion.div>
-          </motion.div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <Link
+              href={
+                "https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=doctor"
+              }
+              className="bg-primary hover:bg-primary/80 text-white font-semibold py-4 px-8 text-center rounded-full transition-colors duration-300 min-w-[200px]"
+            >
+              Join as Doctor
+            </Link>
+            <Link
+              href={
+                "https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=patient"
+              }
+              className="z-20 bg-transparent hover:bg-gray-100 hover:text-primary text-white font-semibold py-4 px-8 text-center rounded-full border-2 border-white transition-colors duration-300 min-w-[200px]"
+            >
+              Join as Patient
+            </Link>
+          </div>
         </div>
 
         {/* Right Image with Special Effects */}
@@ -238,18 +230,6 @@ function WhyChooseUs() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* Animated background glow */}
-          {/* <motion.div
-            className="absolute inset-0 rounded-full"
-            variants={glowVariants}
-            animate="animate"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(144, 150, 248, 0.1) 0%, transparent 70%)",
-            }}
-          /> */}
-
-          {/* Floating particles effect */}
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
@@ -271,12 +251,10 @@ function WhyChooseUs() {
               }}
             />
           ))}
-
-          {/* Main floating image */}
           <motion.img
             src="/features/featuresDevice.png"
             alt="Medical Device"
-            className="w-[250px] scale-180 mt-20 md:-mt-5 lg:scale-180 lg:w-[350px] xl:scale-180 xl:w-[900px] relative z-10"
+            className="w-[200px] scale-120 mt-20 md:-mt-5 lg:scale-180 lg:w-[350px] xl:scale-125 xl:w-[500px] relative z-10"
             variants={floatingVariants}
             animate="animate"
             whileHover={{
@@ -289,35 +267,6 @@ function WhyChooseUs() {
               transformStyle: "preserve-3d",
             }}
           />
-
-          {/* Pulsing ring effect */}
-          {/* <motion.div
-            className="absolute w-96 h-96 border-2 border-[#9096F8] rounded-full opacity-20"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          /> */}
-
-          {/* Secondary ring */}
-          {/* <motion.div
-            className="absolute w-80 h-80 border border-[#DBDDF5] rounded-full opacity-10"
-            animate={{
-              scale: [1.1, 0.9, 1.1],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          /> */}
         </motion.div>
       </motion.div>
     </section>

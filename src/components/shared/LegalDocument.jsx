@@ -7,12 +7,12 @@ function LegalDocument() {
 export default LegalDocument;
 
 export const Description = ({ description, className }) => {
-  return <p className={`text-xl text-left ${className}`}>{description}</p>;
+  return <p className={`text-lg text-left${className}`}>{description}</p>;
 };
 export const AllCapsDescription = ({ description, className }) => {
   const CapsText = description;
   const uppercase = CapsText.toLocaleUpperCase();
-  return <p className={`text-xl ${className}`}>{uppercase}</p>;
+  return <p className={`text-lg ${className}`}>{uppercase}</p>;
 };
 
 export const Header = ({ header, size, className }) => {
@@ -25,7 +25,7 @@ export const DashedCategoryLabel = ({ points, size, className }) => {
       {points.map((point) => {
         return (
           <div className={className}>
-            <p className="text-xl">
+            <p className="text-lg ">
               <span className={`font-bold text-xl`}>{point.title}</span> -{" "}
               {point.description}
             </p>
@@ -42,7 +42,7 @@ export const BulletCategoryLabel = ({ points, size, className }) => {
       {points.map((point) => {
         return (
           <div className={className}>
-            <li className="text-xl list-disc pb-4">
+            <li className="text-lg  list-disc pb-4">
               <span className={`font-bold text-xl`}></span>
               {point.description}
             </li>
@@ -59,7 +59,7 @@ export const DecimalCategoryLabel = ({ points, size, className }) => {
       <div className={className}>
         {points.map((point) => {
           return (
-            <li key={point.id} className="text-xl list-decimal pb-0">
+            <li key={point.id} className="text-lg list-decimal pb-0">
               <span className={`font-bold text-xl`}></span>
               {point.description}
             </li>
@@ -72,10 +72,10 @@ export const DecimalCategoryLabel = ({ points, size, className }) => {
 export const AlphaCategoryLabel = ({ points, size, className }) => {
   return (
     <div>
-      <ol className={`list-[lower-alpha] ${className}`}>
+      <ol className={`list-[lower-alpha] ml-5 ${className}`}>
         {points.map((point) => {
           return (
-            <li key={point.id} className="text-xl pb-0">
+            <li key={point.id} className="text-lg pb-0">
               <span className={`font-bold text-xl`}></span>
               {point.description}
             </li>
@@ -91,7 +91,7 @@ export const RomanCategoryLabel = ({ points, size, className }) => {
       <ol className={`list-[lower-roman] ${className}`}>
         {points.map((point) => {
           return (
-            <li key={point.id} className="text-xl pb-0">
+            <li key={point.id} className="text-lg ml-5 pb-0">
               <span className={`font-bold text-xl`}></span>
               {point.description}
             </li>

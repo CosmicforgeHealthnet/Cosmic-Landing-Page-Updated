@@ -59,7 +59,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#010F42] relative text-white overflow-hidden">
-      <div className="relative z-10 max-w-[1100px] mx-auto px-6 py-16">
+      <div className="relative z-20 max-w-[1100px] mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
@@ -158,7 +158,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <h1 className="absolute z-100 -bottom-15 left-0 font-bold text-[140px] opacity-10 ">
+      <h1 className="absolute z-10 -bottom-15 left-0 font-bold text-[140px] opacity-10 ">
         Cosmic Forge
       </h1>
     </footer>

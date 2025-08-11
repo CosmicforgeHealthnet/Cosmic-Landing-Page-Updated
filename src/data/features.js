@@ -63,7 +63,7 @@ export const Features = [
   {
     id: 3,
     title: "AI Health Assist",
-    img: "/features/healthcarehub.png",
+    img: "/features/AIAssist.png",
     subtitle:
       "Advanced features like robotic virtual diagnosis and Chat Bot virtual health assistant.",
     description: {
@@ -90,7 +90,7 @@ export const Features = [
   {
     id: 4,
     title: "Simplified Processes",
-    img: "/features/healthcarehub.png",
+    img: "/features/Appointment.png",
     subtitle:
       "Simplified process to schedule appointments, manage tests and prescriptions.",
     description: {
