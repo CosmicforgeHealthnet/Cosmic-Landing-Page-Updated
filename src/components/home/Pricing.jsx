@@ -147,25 +147,35 @@ const PricingSection = () => {
                {/* Mobile: Stack cards vertically */}
                <div className="block lg:hidden space-y-6 px-4">
                   {currentPlans.map((plan, index) => (
-                     <div
-                        key={plan.id}
-                        data-aos="fade-up"
-                        data-aos-duration="700"
-                        data-aos-delay={600 + index * 150}
-                        data-aos-anchor-placement="top-bottom"
-                     >
-                        <PricingCard
-                           plan={plan}
-                           isPopular={isPopularPlan(plan.id)}
+                     <ScrollArea className="w-full py-5 whitespace-nowrap rounded-md">
+                        <div className="flex gap-6 xl:gap-8 items-start px-4 py-5">
+                           {currentPlans.map((plan, index) => (
+                              <div
+                                 key={plan.id}
+                                 data-aos="fade-up"
+                                 data-aos-duration="700"
+                                 data-aos-delay={600 + index * 150}
+                                 data-aos-anchor-placement="top-bottom"
+                              >
+                                 <PricingCard
+                                    plan={plan}
+                                    isPopular={isPopularPlan(plan.id)}
+                                 />
+                              </div>
+                           ))}
+                        </div>
+                        <ScrollBar
+                           orientation="horizontal"
+                           className="h-3 bg-red-500"
                         />
-                     </div>
+                     </ScrollArea>
                   ))}
                </div>
 
                {/* Desktop: Horizontal scroll */}
                <div className="hidden lg:block">
                   <ScrollArea className="w-full py-5 whitespace-nowrap rounded-md">
-                     <div className="flex gap-6 xl:gap-8 items-start px-4 py-5">
+                     <div className="flex gap-2 xl:gap-8 items-start px-4 py-5">
                         {currentPlans.map((plan, index) => (
                            <div
                               key={plan.id}
@@ -183,7 +193,7 @@ const PricingSection = () => {
                      </div>
                      <ScrollBar
                         orientation="horizontal"
-                        className="h-3 bg-text"
+                        className="h-3 bg-gray-300"
                      />
                   </ScrollArea>
                </div>
