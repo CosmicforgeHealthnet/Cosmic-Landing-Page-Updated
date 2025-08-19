@@ -37,8 +37,18 @@ const FAQSection = () => {
       <div className="w-full bg-gray-50 py-20 px-6">
          <div className="max-w-4xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16">
-               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <div
+               className="text-center mb-16"
+               data-aos="fade-up"
+               data-aos-duration="800"
+               data-aos-delay="100"
+            >
+               <h2
+                  className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+               >
                   Frequently Asked <span className="text-gray-400">Questions</span>
                </h2>
             </div>
@@ -48,7 +58,11 @@ const FAQSection = () => {
                {FaqData.map((faq, index) => (
                   <div
                      key={index}
-                     className="bg-white rounded-2xl border border-gray-100 overflow-hidden transition-all duration-300 "
+                     className="bg-white rounded-2xl border border-gray-100 overflow-hidden transition-all duration-300"
+                     data-aos="fade-up"
+                     data-aos-duration="600"
+                     data-aos-delay={400 + index * 100}
+                     data-aos-anchor-placement="top-bottom"
                   >
                      {/* Question Header */}
                      <button

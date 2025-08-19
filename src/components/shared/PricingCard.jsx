@@ -5,13 +5,13 @@ const { getDescription, formatPrice } = require("@/utils/pricing");
 
 export const PricingCard = ({ plan, isPopular = false }) => (
    <div
-      className={`relative bg-[#FFFFFF]/60 w-[418px] rounded-[20px] p-8 shadow-sm border h-[600px] flex-shrink-0 ${
-         isPopular ? "border-primary " : "border-gray-100"
+      className={`relative whitespace-normal bg-[#FFFFFF]/60 w-full max-w-[320px] mx-auto lg:mx-0 lg:w-[280px] xl:w-[320px] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-sm border h-[550px] lg:h-[600px] flex flex-col ${
+         isPopular ? "border-primary" : "border-gray-100"
       } hover:shadow-xl transition-all duration-300`}
    >
       {isPopular && (
-         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+         <div className="absolute -top-7 sm:-top-4 left-1/2 transform -translate-x-1/2">
+            <span className="bg-primary text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
                Most Popular
             </span>
          </div>
@@ -19,29 +19,31 @@ export const PricingCard = ({ plan, isPopular = false }) => (
 
       {plan.discountPercentage > 0 && (
          <div className="absolute -top-2 -right-2">
-            <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+            <span className="bg-orange-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-medium">
                {plan.discountPercentage}% OFF
             </span>
          </div>
       )}
 
       {/* Header */}
-      <div className="mb-8">
-         <h3 className="text-[30px] font-semibold text-gray-900 mb-3">{plan.name}</h3>
-         <p className="text-text text-sm leading-relaxed w-fit">{getDescription(plan)}</p>
+      <div className="mb-4 sm:mb-5 lg:mb-6">
+         <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-2">
+            {plan.name}
+         </h3>
+         <p className="text-text text-xs sm:text-sm leading-relaxed">{getDescription(plan)}</p>
       </div>
 
       {/* Price */}
-      <div className="mb-8">
+      <div className="mb-4 sm:mb-5 lg:mb-6">
          <div className="flex items-baseline gap-1">
-            <span className="text-5xl font-bold text-black">
+            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
                {formatPrice(plan.price, plan.currency)}
             </span>
-            {plan.price > 0 && <span className="text-gray-500 text-lg">/month</span>}
+            {plan.price > 0 && <span className="text-gray-500 text-sm sm:text-base">/month</span>}
          </div>
          {plan.originalPrice > plan.price && plan.price > 0 && (
-            <div className="mt-2">
-               <span className="text-gray-400 line-through text-lg">
+            <div className="mt-1">
+               <span className="text-gray-400 line-through text-sm">
                   {formatPrice(plan.originalPrice, plan.currency)}
                </span>
             </div>
@@ -49,18 +51,18 @@ export const PricingCard = ({ plan, isPopular = false }) => (
       </div>
 
       {/* Plan Details */}
-      <div className="mb-6 space-y-2">
+      <div className="mb-4 sm:mb-6 space-y-2 flex-grow">
          {plan.familyMembers !== 1 && (
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-               <Check className="w-4 h-4 text-primary" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+               <Check className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
                <span>
                   {plan.familyMembers === -1 ? "Unlimited" : plan.familyMembers} family members
                </span>
             </div>
          )}
          {plan.monthlyLimits.aiChatbotResponses > 0 && (
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-               <Check className="w-4 h-4 text-primary" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+               <Check className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
                <span>
                   {plan.monthlyLimits.aiChatbotResponses === -1
                      ? "Unlimited"
@@ -70,8 +72,8 @@ export const PricingCard = ({ plan, isPopular = false }) => (
             </div>
          )}
          {plan.monthlyLimits.aiDiagnosticRequests > 0 && (
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-               <Check className="w-4 h-4 text-primary" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+               <Check className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
                <span>
                   {plan.monthlyLimits.aiDiagnosticRequests === -1
                      ? "Unlimited"
@@ -84,7 +86,7 @@ export const PricingCard = ({ plan, isPopular = false }) => (
 
       {/* CTA Button */}
       <Button
-         className={`w-full py-[10px] px-[14px] rounded-2xl font-medium transition-colors duration-300 mb-8 ${
+         className={`w-full py-2 sm:py-[10px] px-3 sm:px-[14px] rounded- sm:rounded-2xl font-medium text-sm sm:text-base transition-colors duration-300 mb-4 sm:mb-6 lg:mb-8 ${
             isPopular
                ? "bg-primary text-white hover:bg-[#1e2394]"
                : "bg-[#010F42] text-white hover:bg-gray-800"
@@ -94,16 +96,16 @@ export const PricingCard = ({ plan, isPopular = false }) => (
       </Button>
 
       {/* Features */}
-      <div className="space-y-2 grid grid-cols-2  max-w-full">
+      <div className="space-y-2 grid grid-cols-2 gap-x-2 ">
          {plan.features.map((feature, index) => (
             <div
                key={index}
-               className="flex items-start shrink gap-3 "
+               className="flex items-start gap-2 sm:gap-3"
             >
-               <div className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
+               <div className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-indigo-100 flex items-center justify-center mt-0.5">
+                  <Check className="w-2 h-2 sm:w-3 sm:h-3 text-primary" />
                </div>
-               <p className="text-text text-sm w-fit">{feature}</p>
+               <p className="text-text text-xs sm:text-sm leading-relaxed">{feature}</p>
             </div>
          ))}
       </div>

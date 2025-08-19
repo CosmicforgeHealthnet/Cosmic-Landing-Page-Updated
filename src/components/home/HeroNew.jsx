@@ -9,7 +9,13 @@ const HeroNew = () => {
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-5 items-center justify-between min-h-screen py-8 lg:py-0">
                {/* Left Content */}
                <div className="">
-                  <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-gradient-to-r from-[#F5F5F5] to-[#EEEEFF] border border-[#E0E0FF]">
+                  {/* Badge with subtle entrance */}
+                  <div
+                     className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-gradient-to-r from-[#F5F5F5] to-[#EEEEFF] border border-[#E0E0FF]"
+                     data-aos="fade-down"
+                     data-aos-duration="800"
+                     data-aos-delay="100"
+                  >
                      <div className="relative">
                         <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                         <div className="absolute inset-0 w-2 h-2 bg-primary rounded-full animate-ping opacity-75"></div>
@@ -22,25 +28,51 @@ const HeroNew = () => {
                      </div>
                   </div>
 
-                  <h1 className="mt-4 text-[32px] sm:text-[42px] lg:text-[50px] font-semibold leading-[36px] sm:leading-[46px] lg:leading-[50px]">
+                  {/* Main heading with dramatic entrance */}
+                  <h1
+                     className="mt-4 text-[32px] sm:text-[42px] lg:text-[50px] font-semibold leading-[36px] sm:leading-[46px] lg:leading-[50px]"
+                     data-aos="fade-up"
+                     data-aos-duration="1000"
+                     data-aos-delay="200"
+                  >
                      Simplified and Smarter <span className="text-primary">Healthcare </span>
                      solutions, One click at a time.
                   </h1>
 
-                  <p className="text-[14px] sm:text-[16px] mt-4 text-text font-normal">
+                  {/* Subtitle with gentle fade */}
+                  <p
+                     className="text-[14px] sm:text-[16px] mt-4 text-text font-normal"
+                     data-aos="fade-up"
+                     data-aos-duration="800"
+                     data-aos-delay="400"
+                  >
                      Streamlining healthcare services to meet your needs...
                   </p>
 
+                  {/* CTA Button with bounce effect */}
                   <Link
                      target="_blank"
                      className="mt-4 bg-primary text-white rounded-full inline-block py-[12px] sm:py-[14px] px-[32px] sm:px-[40px] shadow-lg shadow-[#DADCFF]/60 hover:shadow-xl hover:shadow-[#DADCFF]/60 transition-all duration-300 hover:-translate-y-1 text-[14px] sm:text-[16px]"
                      href="https://dashboard.cosmicforge-healthnet.com/auth/register"
+                     data-aos="zoom-in"
+                     data-aos-duration="600"
+                     data-aos-delay="600"
                   >
                      Get Started
                   </Link>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 lg:mt-12 gap-6 lg:gap-4">
-                     <div>
+                  {/* Feature cards with staggered entrance */}
+                  <div
+                     className="grid grid-cols-1 sm:grid-cols-2 mt-8 lg:mt-12 gap-6 lg:gap-4"
+                     data-aos="fade-up"
+                     data-aos-duration="800"
+                     data-aos-delay="800"
+                  >
+                     <div
+                        data-aos="slide-right"
+                        data-aos-duration="700"
+                        data-aos-delay="1000"
+                     >
                         <div
                            className="w-full h-[5px] rounded-full"
                            style={{
@@ -58,7 +90,11 @@ const HeroNew = () => {
                            </p>
                         </div>
                      </div>
-                     <div>
+                     <div
+                        data-aos="slide-left"
+                        data-aos-duration="700"
+                        data-aos-delay="1200"
+                     >
                         <div
                            className="w-full h-[5px] rounded-full"
                            style={{
@@ -80,10 +116,20 @@ const HeroNew = () => {
                </div>
 
                {/* Right Content - Dashboard */}
-               <div className=" flex items-center justify-center">
+               <div
+                  className="flex items-center justify-center"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+               >
                   <div className="relative w-full max-w-[320px] sm:max-w-[380px] lg:w-[400px] bg-[#E6E7FD] p-2 rounded-[20px]">
                      {/* Glass card with gradient border */}
-                     <div className="z-20 absolute bottom-8 sm:bottom-10 lg:bottom-12 -left-6 sm:-left-10 lg:-left-14 backdrop-blur-md rounded-xl backdrop-saturate-150">
+                     <div
+                        className="z-20 absolute bottom-8 sm:bottom-10 lg:bottom-12 -left-6 sm:-left-10 lg:-left-14 backdrop-blur-md rounded-xl backdrop-saturate-150"
+                        data-aos="slide-up"
+                        data-aos-duration="800"
+                        data-aos-delay="1000"
+                     >
                         <div className="p-[1px] bg-gradient-to-b from-white to-gray-300 rounded-xl">
                            <div className="bg-[#F3F4FB]/50 rounded-xl p-4 sm:p-5 lg:p-6 min-w-[280px] sm:min-w-[320px] lg:min-w-[360px]">
                               <h1 className="text-black font-semibold text-[13px] sm:text-[14px] lg:text-[15px] mb-4 lg:mb-6">
@@ -118,7 +164,12 @@ const HeroNew = () => {
                         </div>
                      </div>
 
-                     <div className="z-20 w-full sm:w-[320px] lg:w-[400px] border p-3 sm:p-4 border-[#dedee48b] absolute overflow-hidden -top-3 sm:-top-4 lg:-top-5 -right-6 sm:-right-10 lg:-right-14 left-6 sm:left-10 lg:left-14 backdrop-blur-md rounded-xl backdrop-saturate-150">
+                     <div
+                        className="z-20 w-full sm:w-[320px] lg:w-[400px] border p-3 sm:p-4 border-[#dedee48b] absolute overflow-hidden -top-3 sm:-top-4 lg:-top-5 -right-6 sm:-right-10 lg:-right-14 left-6 sm:left-10 lg:left-14 backdrop-blur-md rounded-xl backdrop-saturate-150"
+                        data-aos="slide-down"
+                        data-aos-duration="800"
+                        data-aos-delay="800"
+                     >
                         <h1 className="text-black font-semibold text-[13px] sm:text-[14px] lg:text-[15px] mb-2">
                            Track and View Appointments
                         </h1>
@@ -141,7 +192,12 @@ const HeroNew = () => {
                      {/* Background content for blur effect */}
                      <div className="absolute inset-0 bg-gradient-to-br from-purple-200/50 via-blue-200/50 to-indigo-300/50 rounded-[20px]"></div>
 
-                     <div className="relative z-10">
+                     <div
+                        className="relative z-10"
+                        data-aos="zoom-in"
+                        data-aos-duration="1000"
+                        data-aos-delay="500"
+                     >
                         <img
                            src="/home/h1.png"
                            className="w-full h-auto rounded-[10px]"

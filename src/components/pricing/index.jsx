@@ -6,6 +6,7 @@ import { PricingCard } from "../shared/PricingCard";
 import { isPopularPlan } from "@/utils/pricing";
 import { Button } from "../ui/button";
 import PageHeader from "../shared/Pageheader";
+import { Label } from "../ui/label";
 
 const PricingIndex = () => {
    const [userType, setUserType] = useState("patient");
@@ -40,9 +41,8 @@ const PricingIndex = () => {
                      <Switch
                         checked={userType === "patient"}
                         onCheckedChange={(checked) => setUserType(checked ? "patient" : "doctor")}
-                        className="data-[state=checked]:bg-blue-600"
                      />
-                     <label className="text-lg font-medium text-gray-700">Patient</label>
+                     <Label className="text-lg font-medium text-gray-700">Patient</Label>
                   </div>
 
                   {/* Currency Switch */}

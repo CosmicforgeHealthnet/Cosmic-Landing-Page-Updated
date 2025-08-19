@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-// import { Link } from "react-router-dom";
 
 const HealthcareCTASection = () => {
    return (
@@ -13,12 +12,22 @@ const HealthcareCTASection = () => {
       >
          <div className="max-w-[1100px] mx-auto">
             {/* Main CTA Card */}
-            <div className="bg-[#272EA7] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 relative overflow-hidden">
+            <div
+               className="bg-[#272EA7] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 relative overflow-hidden"
+               data-aos="zoom-in"
+               data-aos-duration="1000"
+               data-aos-delay="200"
+            >
                {/* Content Container */}
                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
                   {/* Left Content */}
                   <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
-                     <div className="space-y-3 lg:space-y-4">
+                     <div
+                        className="space-y-3 lg:space-y-4"
+                        data-aos="fade-right"
+                        data-aos-duration="800"
+                        data-aos-delay="400"
+                     >
                         <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
                            Healthcare, on your{" "}
                            <span className="text-[#9096F8]">
@@ -26,18 +35,31 @@ const HealthcareCTASection = () => {
                            </span>
                         </h2>
 
-                        <p className="text-blue-100 text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+                        <p
+                           className="text-blue-100 text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0"
+                           data-aos="fade-right"
+                           data-aos-duration="700"
+                           data-aos-delay="600"
+                        >
                            Instant video visits, flexible doctor pricing, and subscription
                            savings—all in one secure platform.
                         </p>
                      </div>
 
                      {/* CTA Buttons */}
-                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                     <div
+                        className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+                        data-aos="fade-up"
+                        data-aos-duration="600"
+                        data-aos-delay="800"
+                     >
                         <a
                            target="_blank"
                            className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 sm:px-8 lg:px-[40px] py-3 sm:py-[14px] rounded-full font-semibold hover:bg-white/30 transition-all duration-300 text-center text-sm sm:text-base"
                            href="https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=doctor"
+                           data-aos="slide-right"
+                           data-aos-duration="500"
+                           data-aos-delay="1000"
                         >
                            Join as Doctor
                         </a>
@@ -45,6 +67,9 @@ const HealthcareCTASection = () => {
                            target="_blank"
                            className="bg-white text-[#272EA7] px-6 sm:px-8 lg:px-[40px] py-3 sm:py-[14px] rounded-full font-semibold hover:bg-white/90 transition-all duration-300 text-center text-sm sm:text-base"
                            href="https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=patient"
+                           data-aos="slide-left"
+                           data-aos-duration="500"
+                           data-aos-delay="1100"
                         >
                            Join as Patient
                         </a>
@@ -52,9 +77,19 @@ const HealthcareCTASection = () => {
                   </div>
 
                   {/* Right Statistics */}
-                  <div className="space-y-6 lg:space-y-8">
+                  <div
+                     className="space-y-6 lg:space-y-8"
+                     data-aos="fade-left"
+                     data-aos-duration="800"
+                     data-aos-delay="500"
+                  >
                      {/* Application Users Stat */}
-                     <div className="text-center lg:text-right">
+                     <div
+                        className="text-center lg:text-right"
+                        data-aos="flip-left"
+                        data-aos-duration="600"
+                        data-aos-delay="700"
+                     >
                         <div className="flex items-end justify-center lg:justify-end gap-1 sm:gap-2 mb-1 sm:mb-2">
                            <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
                               1
@@ -69,7 +104,12 @@ const HealthcareCTASection = () => {
                      </div>
 
                      {/* Growth Stat */}
-                     <div className="text-center lg:text-right">
+                     <div
+                        className="text-center lg:text-right"
+                        data-aos="flip-left"
+                        data-aos-duration="600"
+                        data-aos-delay="900"
+                     >
                         <div className="flex items-end justify-center lg:justify-end gap-1 mb-1 sm:mb-2">
                            <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
                               80
@@ -82,7 +122,12 @@ const HealthcareCTASection = () => {
                      </div>
 
                      {/* Doctors Joined Stat */}
-                     <div className="text-center lg:text-right">
+                     <div
+                        className="text-center lg:text-right"
+                        data-aos="flip-left"
+                        data-aos-duration="600"
+                        data-aos-delay="1100"
+                     >
                         <div className="flex items-end justify-center lg:justify-end gap-1 mb-1 sm:mb-2">
                            <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
                               500
@@ -99,12 +144,32 @@ const HealthcareCTASection = () => {
                </div>
 
                {/* Background Decorative Elements - Hidden on mobile for cleaner look */}
-               <div className="hidden lg:block absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-48 translate-x-48"></div>
-               <div className="hidden lg:block absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-32 -translate-x-32"></div>
+               <div
+                  className="hidden lg:block absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-48 translate-x-48"
+                  data-aos="fade"
+                  data-aos-duration="2000"
+                  data-aos-delay="300"
+               ></div>
+               <div
+                  className="hidden lg:block absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-32 -translate-x-32"
+                  data-aos="fade"
+                  data-aos-duration="2000"
+                  data-aos-delay="500"
+               ></div>
 
                {/* Mobile decorative elements - smaller and positioned better */}
-               <div className="lg:hidden absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-               <div className="lg:hidden absolute bottom-0 left-0 w-24 h-24 sm:w-32 sm:h-32 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+               <div
+                  className="lg:hidden absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 bg-white/5 rounded-full -translate-y-16 translate-x-16"
+                  data-aos="fade"
+                  data-aos-duration="1500"
+                  data-aos-delay="400"
+               ></div>
+               <div
+                  className="lg:hidden absolute bottom-0 left-0 w-24 h-24 sm:w-32 sm:h-32 bg-white/5 rounded-full translate-y-12 -translate-x-12"
+                  data-aos="fade"
+                  data-aos-duration="1500"
+                  data-aos-delay="600"
+               ></div>
             </div>
          </div>
       </div>

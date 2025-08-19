@@ -2,6 +2,7 @@ import "./globals.css";
 import Head from "next/head";
 import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
+import AOSProvider from "@/providers/AOSProvider";
 
 export const metadata = {
    title: "Create Next App",
@@ -12,9 +13,11 @@ export default function RootLayout({ children }) {
    return (
       <html lang="en">
          <body>
-            <Header />
-            {children}
-            <Footer />
+            <AOSProvider>
+               <Header />
+               {children}
+               <Footer />
+            </AOSProvider>
          </body>
       </html>
    );
