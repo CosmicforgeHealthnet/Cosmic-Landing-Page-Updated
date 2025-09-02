@@ -117,7 +117,7 @@ const Footer = () => {
 
                   {/* Social Links */}
                   <div
-                     className="flex space-x-4"
+                     className="flex space-x-4 relative z-3"
                      data-aos="fade-up"
                      data-aos-duration="600"
                      data-aos-delay="1000"
@@ -230,7 +230,7 @@ const Footer = () => {
             </div>
          </div>
 
-         <h1 className="absolute z-100  -bottom-15 left-0 font-bold text-[50px] md:text-[200px] opacity-10!">
+         <h1 className="absolute z-2  -bottom-15 left-0 font-bold text-[50px] md:text-[200px] opacity-10!">
             Cosmic Forge
          </h1>
       </footer>
