@@ -7,6 +7,52 @@ import {
   Description,
   Header,
 } from "../shared/LegalDocument";
+import { OurPlatFormEnsures } from "@/data/TermsAndConditions";
+
+const ComplianceData = [
+  {
+    id: "p1",
+    isHeader: false,
+    description:
+      "At Cosmicforge HealthNet, we take compliance seriously. We design every part of our platform to meet strict global standards for your payment security and trust.",
+  },
+  {
+    id: "p2",
+    isHeader: false,
+    description:
+      "We do not collect or store your credit card data. All financial transactions are processed through our PCI DSS Level 1 certified partners, including Paystack and Flutterwave. Our partners handle card entry, authorization, and disbursement securely.",
+  },
+  {
+    id: "p3",
+    isHeader: false,
+    description: "Our platform ensures:",
+    isList: true,
+    List: (
+      <BulletCategoryLabel
+        points={OurPlatFormEnsures}
+        className="flex flex-col gap-5"
+      />
+    ),
+  },
+  {
+    id: "p4",
+    isHeader: false,
+    description:
+      "As a brand that does not handle card data directly, Cosmicforge HealthNet qualifies as a Level 4 PCI-DSS merchant. While we are not required to hold independent PCI certification, we uphold the same best practices. ",
+  },
+  {
+    id: "p5",
+    isHeader: false,
+    description:
+      "We commit to working only with certified providers, to maintain security, and to avoid storage of sensitive information.",
+  },
+  {
+    id: "p6",
+    isHeader: false,
+    description:
+      "We also perform regular internal reviews and security assessments to protect your data and maintain our alignment with global standards. Our compliance framework ensures safe, reliable payments for both patients and doctors on our platform.",
+  },
+];
 
 function ComplianceContent() {
   const HeaderStyle = "mt-5 text-2xl font-bold pb-2";
@@ -15,116 +61,29 @@ function ComplianceContent() {
     <section className="max-w-[1100px] mx-auto py-10 px-4 xl:px-0">
       <div>
         {/* Refund Policy */}
-        <Header header={"Introduction"} className={HeaderStyle} />
-        <Description
-          description={`CosmicForge HealthNet Limited ("the Company") is a digital health technology 
-platform that connects patients with licensed healthcare professionals for virtual 
-consultations and related health services. While the platform facilitates secure 
-online payments, it does not collect, store, or process cardholder data directly`}
-        />
-        <Header
-          header={"Use of PCI-Certified Payment Gateways"}
-          className={HeaderStyle}
-        />
-        <Description
-          description={`All financial transactions on the platform are processed exclusively through PCI-DSS 
-Level 1 certified third-party payment service providers, including:`}
-        />
-        <DashedCategoryLabel
-          points={[
-            {
-              id: 1,
-              description: "Paystack",
-            },
-            {
-              id: 2,
-              description: "Flutterwave",
-            },
-          ]}
-        />
-        <Description
-          description={`These providers manage the complete payment workflow, including card data input, 
-authorization, transaction processing, and disbursement.`}
-        />
-
-        <Header
-          header={"Platform Integration & Security Measures"}
-          className={HeaderStyle}
-        />
-        <Description
-          description={`CosmicForge HealthNet Limited ensures a secure payment environment through the 
-following controls:`}
-          className={"pb-2"}
-        />
-        <DashedCategoryLabel
-          points={[
-            {
-              id: 1,
-              description: `No credit card numbers, CVVs, or other sensitive payment data are stored, logged, or 
-processed by the platform.`,
-            },
-            {
-              id: 2,
-              description: `All payment interactions occur via HTTPS-encrypted sessions, using redirects or 
-secure embedded interfaces provided by the payment gateways.`,
-            },
-            {
-              id: 3,
-              description: `Platform sessions are protected by SSL/TLS encryption, and internal system access is 
-controlled via role-based permissions.`,
-            },
-            {
-              id: 4,
-              description: `Only non-sensitive transaction metadata (e.g., reference IDs, status, user IDs) is 
-retained for reconciliation and reporting`,
-            },
-            {
-              id: 5,
-              description: `Access to financial records is restricted and monitored to prevent unauthorized use.`,
-            },
-          ]}
-        />
-
-        <Header header={"Compliance Standing"} className={HeaderStyle} />
-        <Description
-          description={`As a business that does not handle card data directly and relies exclusively on PCIcertified processors, CosmicForge HealthNet Limited qualifies as a Level 4 PCI-DSS 
-merchant and is not required to maintain independent PCI certification. Nonetheless, 
-the Company upholds PCI-DSS best practices by:`}
-          className={"pb-2"}
-        />
-
-        <DashedCategoryLabel
-          points={[
-            {
-              id: 1,
-              description: `Ensuring all payment flows are secured and encrypted`,
-            },
-            {
-              id: 2,
-              description: `Avoiding storage of sensitive payment information`,
-            },
-            {
-              id: 3,
-              description: `Working only with compliant and certified gateway providers`,
-            },
-          ]}
-        />
-
-        <Header header={"Ongoing Commitment"} className={HeaderStyle} />
-        <Description
-          description={`The Company performs regular internal security assessments and compliance reviews 
-to maintain data integrity and e`}
-          className={"pb-2"}
-        />
-        <Description
-          description={`This statement is provided to affirm CosmicForge HealthNet Limited's commitment to 
-PCI-DSS compliance via certified gateway integrations and is available for use during 
-audits, vendor onboarding, or due diligence procedures.`}
-          className={"pb-2"}
-        />
-
-        <hr className="mt-5 mb-2" />
-        <p className="italic">Last updated: June 2025</p>
+        <div>
+          {/* Terms and conditions */}
+          {ComplianceData.map((data) => (
+            <React.Fragment key={data.key}>
+              {data.isHeader && (
+                <Header header={data.header} className={HeaderStyle} />
+              )}
+              <Description description={data.description} className={"pb-2"} />
+              {data.isSubDescriptions &&
+                data.subDescription.map((subDes) => (
+                  <Description
+                    key={subDes.id}
+                    isLink={subDes.isLink ? subDes.isLink : false}
+                    link={subDes.link && subDes.link}
+                    linkType={subDes.linkType && subDes.linkType}
+                    description={subDes.description}
+                    className={"pb-2"}
+                  />
+                ))}
+              {data.isList && data.List}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </section>
   );

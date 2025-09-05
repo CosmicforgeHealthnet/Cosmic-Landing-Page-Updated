@@ -14,10 +14,12 @@ const PageHeader = ({
   className = "",
   backButton,
 }) => {
-   return (
-      <header className={`bg-white border-b border-b-gray-100 relative h-[300px] overflow-hidden`}>
-         <div className="bg-[#9096F8] w-[120px] h-[120px] md:w-[400px] md:h-[400px] blur-[100px] absolute top-[50%] left-[-8rem]"></div>
-         <div className="bg-[#03C800] w-[120px]  h-[120px] md:w-[400px] md:h-[400px] blur-[100px] absolute top-0 right-[-8rem]"></div>
+  return (
+    <header
+      className={`bg-white border-b border-b-gray-100 relative h-[300px] overflow-hidden`}
+    >
+      <div className="bg-[#9096F8] w-[120px] h-[120px] md:w-[400px] md:h-[400px] blur-[100px] absolute top-[50%] left-[-8rem]"></div>
+      {/* <div className="bg-[#03C800] w-[120px]  h-[120px] md:w-[400px] md:h-[400px] blur-[100px] absolute top-0 right-[-8rem]"></div> */}
 
       <div className="max-w-[1100px] h-full flex items-center mx-auto w-full px-4">
         <div className="space-y-4 relative z-10  ">

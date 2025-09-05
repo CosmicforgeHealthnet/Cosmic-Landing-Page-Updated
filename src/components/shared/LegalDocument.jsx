@@ -6,9 +6,42 @@ function LegalDocument() {
 
 export default LegalDocument;
 
-export const Description = ({ description, className }) => {
-  return <p className={`text-lg text-left${className}`}>{description}</p>;
+export const Description = ({
+  description,
+  className,
+  isLink,
+  link,
+  linkType,
+}) => {
+  // check the link type
+  function getLinkType() {
+    let LINK;
+    if (linkType == "email") {
+      LINK = `mailto:${link}`;
+    } else if (linkType == "web") {
+      LINK = link;
+    }
+    return LINK;
+  }
+  return isLink && isLink ? (
+    // check if there are links in the description and add an a tag with styling to it
+    <p>
+      {description.split(link).map((part, index, arr) => (
+        <span key={index}>
+          {part}
+          {index < arr.length - 1 && (
+            <a href={getLinkType()} className="text-blue-600 underline">
+              {link}
+            </a>
+          )}
+        </span>
+      ))}
+    </p>
+  ) : (
+    <p className={`text-lg text-left ${className}`}>{description}</p>
+  );
 };
+
 export const AllCapsDescription = ({ description, className }) => {
   const CapsText = description;
   const uppercase = CapsText.toLocaleUpperCase();

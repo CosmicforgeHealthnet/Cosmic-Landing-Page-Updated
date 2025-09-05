@@ -3,18 +3,18 @@ import React from "react";
 import PageHeader from "../shared/Pageheader";
 import { ScrollToTopButton } from "../ScrollToTopButton";
 import { useAnimatedScrollButton } from "@/hooks/useAnimatedScrollButton";
-import ComplianceContent from "./ComplianceContent";
+import SecurityContent from "./SecurityContent";
 
-const ComplianceIndex = () => {
+const SecurityIndex = () => {
   const { scrollToTop, isButtonVisible } = useAnimatedScrollButton();
 
   return (
     <div>
       <PageHeader
-        title="Compliance"
+        title="Security"
         gradient="from-blue-400 via-purple-400 to-green-300"
       />
-      <ComplianceContent />
+      <SecurityContent />
       <ScrollToTopButton
         scrollToTop={scrollToTop}
         isButtonVisible={isButtonVisible}
@@ -23,4 +23,4 @@ const ComplianceIndex = () => {
   );
 };
 
-export default ComplianceIndex;
+export default SecurityIndex;

@@ -46,6 +46,112 @@ export const InformedConsentConditions = [
       "This Informed Consent will become a part of your medical record.",
   },
 ];
+// Terms and conditions
+export const userResponsibilities = [
+  {
+    id: 1,
+    description: "Provide accurate, complete, and current information.",
+  },
+  {
+    id: 2,
+    description: "Use the platform only for lawful health-related purposes.",
+  },
+  {
+    id: 3,
+    description:
+      "Refrain from uploading harmful, misleading, or offensive content.",
+  },
+  {
+    id: 4,
+    description:
+      "Respect intellectual property rights and confidentiality obligations.",
+  },
+];
+
+// Security
+export const whatWeProtect = [
+  {
+    id: 1,
+    description:
+      "Patient health records, such as lab results, prescriptions, and diagnoses.",
+  },
+  {
+    id: 2,
+    description:
+      "Personal information, including name, contact details, and date of birth.",
+  },
+  {
+    id: 3,
+    description: "Doctor verification documents, including licenses and IDs.",
+  },
+  {
+    id: 4,
+    description: "Uploaded files such as scans, PDFs, and reports.",
+  },
+  {
+    id: 5,
+    description: "System activity logs that track who accessed what and when.",
+  },
+];
+export const howWeSecureData = [
+  {
+    id: 1,
+    title: "Encryption in Transit",
+    description:
+      "Data moving between your device and our servers is protected by TLS, the same standard used by global banks. Our internal services also use encrypted channels.",
+  },
+  {
+    id: 2,
+    title: "File Sharing",
+    description:
+      "Files are never shared as open links. We issue secure, time-limited links tied to the file, the user, and the action.",
+  },
+  {
+    id: 3,
+    title: "Access Control",
+    description:
+      "Patients see only their own records. Doctors see records of patients they are treating only. Admin teams see limited data required for verification or support. All access is logged and monitored.",
+  },
+  {
+    id: 4,
+    title: "FHIR Data Security",
+    description:
+      "We use the FHIR standard for health data. Sensitive files are automatically detected, classified, encrypted with the highest level of protection, and labeled with clear sharing rules.",
+  },
+  {
+    id: 5,
+    title: "Compliance and Monitoring",
+    description:
+      "We follow NDPR/NDPA in Nigeria, HIPAA in the United States, GDPR in Europe, and international standards, including ISO 27001 and SOC 2. All access is logged, suspicious activity is flagged, and data is deleted securely when no longer required.",
+  },
+];
+
+// Compliance
+export const OurPlatFormEnsures = [
+  {
+    id: 1,
+    description:
+      "No storage of card numbers, CVVs, or sensitive payment details.",
+  },
+  {
+    id: 2,
+    description: "All payment sessions are encrypted with HTTPS and SSL/TLS",
+  },
+  {
+    id: 3,
+    description:
+      "Secure redirection or embedded payment flows managed by certified providers",
+  },
+  {
+    id: 4,
+    description: "Role-based permissions to control system access",
+  },
+  {
+    id: 5,
+    description:
+      "Retention of only non-sensitive data, such as transaction IDs and payment status, for reconciliation and reporting",
+  },
+];
 
 export const ElectronicCommunications = [
   {
