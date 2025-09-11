@@ -2,7 +2,7 @@ import React from "react";
 import PageHeader from "../shared/Pageheader";
 import Link from "next/link";
 
-const ForDoctors: React.FC = () => {
+const ForDoctors = () => {
    return (
       <div className="min-h-screen">
          <PageHeader

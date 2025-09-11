@@ -1,7 +1,7 @@
 import React from "react";
 import ContactUsComponent from "@/components/contact";
-const ContactUsPage = () => {
+const Contact = () => {
    return <ContactUsComponent />;
 };
 
-export default ContactUsPage;
+export default Contact;
