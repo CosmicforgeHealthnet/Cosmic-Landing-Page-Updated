@@ -4,28 +4,44 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const FAQSection = () => {
-   const [openIndex, setOpenIndex] = useState(0); // First item open by default
+   const [openIndex, setOpenIndex] = useState(0);
 
    const FaqData = [
       {
-         label: "What is this platform, and how does it work?",
-         texts: "We prioritize your privacy and security. Our platform employs advanced encryption standards and complies with healthcare data protection regulations to ensure that all personal and medical information remains confidential and secure. We also implement robust authentication processes to prevent unauthorized access.",
+         label: "Who are we?",
+         texts: "We are a digital healthcare platform designed to connect patients, doctors, laboratories, and pharmacies in a single, secure system. Our goal is to make healthcare accessible, reliable, and efficient through telemedicine, patient data management, and our integrated services.",
       },
       {
-         label: "Is my personal and medical data secure on this platform?",
-         texts: "We prioritize your privacy and security. Our platform employs advanced encryption standards and complies with healthcare data protection regulations to ensure that all personal and medical information remains confidential and secure. We also implement robust authentication processes to prevent unauthorized access.",
+         label: "How do consultations work?",
+         texts: "You book an appointment, and your matched doctor joins you through a secure video or audio call at the scheduled time or chats directly with you at any time of the day. You can also share your medical history, lab results, or prescriptions with your doctor during this session. We have designed the process to be simple and confidential.",
       },
       {
-         label: "Who can use this platform?",
-         texts: "We prioritize your privacy and security. Our platform employs advanced encryption standards and complies with healthcare data protection regulations to ensure that all personal and medical information remains confidential and secure. We also implement robust authentication processes to prevent unauthorized access.",
+         label: "Is my medical information safe with Cosmicforge HealthNet?",
+         texts: "Yes. We use advanced encryption and strict data protection protocols to keep your information secure. We comply with international healthcare regulations, so your data is always handled responsibly.",
       },
       {
-         label: "How do I sign up as a doctor, patient, laboratory, or pharmacy?",
-         texts: "We prioritize your privacy and security. Our platform employs advanced encryption standards and complies with healthcare data protection regulations to ensure that all personal and medical information remains confidential and secure. We also implement robust authentication processes to prevent unauthorized access.",
+         label: "Can doctors access lab and pharmacy information?",
+         texts: "No. Patients have full autonomy and direct access to labs and pharmacies, but can share lab tests with doctors for review and to provide prescriptions directly through our platform.",
       },
       {
-         label: "Can I access the platform on mobile and desktop?",
-         texts: "We prioritize your privacy and security. Our platform employs advanced encryption standards and complies with healthcare data protection regulations to ensure that all personal and medical information remains confidential and secure. We also implement robust authentication processes to prevent unauthorized access.",
+         label: "Can labs and pharmacies use Cosmicforge HealthNet?",
+         texts: "Yes! You are not left out. Labs receive and update test orders within the system. Pharmacies receive digital prescriptions, fulfil orders, and notify patients when medication is ready. Some pharmacies also offer delivery, depending on your location.",
+      },
+      {
+         label: "What if I need care Overseas?",
+         texts: "We are actively partnered with medical tour guides to assist you during the entire process. They can track your travel, hospital procedures, and post-treatment recovery, making medical tours more transparent and easier to manage.",
+      },
+      {
+         label: "Who can use Cosmicforge HealthNet?",
+         texts: "Our platform is useful for patients looking for remote consultations, doctors seeking efficient workflows, labs managing tests, and pharmacies handling prescriptions. We bring all roles together to improve the quality of care provided and the overall experience of the patient.",
+      },
+      {
+         label: "How does Cosmicforge HealthNet use technology like AI or AR/VR?",
+         texts: "We use AI to support doctors with insights, patient monitoring, and for faster decision-making. AR and VR tools help improve consultations and patient education; therefore, we integrated these technologies to make healthcare safer, more accurate, and easier to access.",
+      },
+      {
+         label: "How is Cosmicforge HealthNet different from other telemedicine platforms?",
+         texts: "Unlike basic video call tools, we house the entire healthcare flow. Patients, doctors, labs, and pharmacies work in one place, supported by advanced tools; AI, AR/VR tools exploring adaptive technology to improve our user experience.",
       },
    ];
 
