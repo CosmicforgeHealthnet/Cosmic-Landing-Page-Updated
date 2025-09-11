@@ -30,7 +30,7 @@ const ComplianceData = [
     List: (
       <BulletCategoryLabel
         points={OurPlatFormEnsures}
-        className="flex flex-col gap-5"
+        className="flex flex-col gap-2 mb-4"
       />
     ),
   },

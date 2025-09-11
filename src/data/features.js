@@ -4,7 +4,7 @@ export const Features = [
     title: "Unified Health Care Hub",
     img: "/features/healthcarehub.png",
     subtitle:
-      "A unified platform connecting doctors, patients, labs, and pharmacies seamlessly",
+      "We provide secure video consultations, audio conference calling, real-time chat, and remote monitoring. You can connect with your doctor from anywhere while maintaining the quality of an in-person visit.",
     description: {
       paragraphs: [
         {

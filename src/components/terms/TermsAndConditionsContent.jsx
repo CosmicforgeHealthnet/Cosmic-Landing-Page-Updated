@@ -5,11 +5,13 @@ import {
   Header,
 } from "../shared/LegalDocument";
 import { userResponsibilities } from "@/data/TermsAndConditions";
+import { LegalDocumentContainer } from "../shared/LegalDocumentContainer";
 
 const TermsData = [
   {
     id: "p1",
-    isHeader: false,
+    isHeader: true,
+    header: "Introduction",
     description:
       "Welcome to Cosmicforge HealthNet. By using our platform, you agree to these Terms of Use. Please read them carefully. They explain how you engage with our services, how we protect your information, and what we expect from you as a member of our digital healthcare community.",
   },
@@ -127,7 +129,8 @@ function TermsAndConditionsContent() {
     <section className="max-w-[1100px] mx-auto py-10 px-4 xl:px-0">
       <div>
         {/* Terms and conditions */}
-        {TermsData.map((data) => (
+        <LegalDocumentContainer title="Security Policy" sections={TermsData} />
+        {/* {TermsData.map((data) => (
           <React.Fragment key={data.key}>
             {data.isHeader && (
               <Header header={data.header} className={HeaderStyle} />
@@ -146,7 +149,7 @@ function TermsAndConditionsContent() {
               ))}
             {data.isList && data.List}
           </React.Fragment>
-        ))}
+        ))} */}
       </div>
     </section>
   );

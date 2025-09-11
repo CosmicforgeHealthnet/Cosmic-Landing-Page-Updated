@@ -10,10 +10,12 @@ import {
   userResponsibilities,
   whatWeProtect,
 } from "@/data/TermsAndConditions";
+import { LegalDocumentContainer } from "../shared/LegalDocumentContainer";
 
 const SecurityData = [
   {
     id: "p1",
+    header: "Introduction",
     isHeader: false,
     description:
       "Protecting patients and providing information is central to our mission. We work with sensitive health data, so security is built into every layer of our platform. Our goal is simple. You should always feel confident that your information is safe with us.",
@@ -46,6 +48,8 @@ const SecurityData = [
   },
   {
     id: "p4",
+    isHeader: true,
+    header: "Conclusion",
     description:
       "At Cosmicforge HealthNet, your health data stays encrypted, restricted to the right people, and tracked at every step. Security is not an option. It is a commitment.",
   },
@@ -58,27 +62,10 @@ function SecurityContent() {
     <section className="max-w-[1100px] mx-auto py-10 px-4 xl:px-0">
       <div>
         {/* Refund Policy */}
-
-        {SecurityData.map((data) => (
-          <React.Fragment key={data.key}>
-            {data.isHeader && (
-              <Header header={data.header} className={HeaderStyle} />
-            )}
-            <Description description={data.description} className={"pb-2"} />
-            {data.isSubDescriptions &&
-              data.subDescription.map((subDes) => (
-                <Description
-                  key={subDes.id}
-                  isLink={subDes.isLink ? subDes.isLink : false}
-                  link={subDes.link && subDes.link}
-                  linkType={subDes.linkType && subDes.linkType}
-                  description={subDes.description}
-                  className={"pb-2"}
-                />
-              ))}
-            {data.isList && data.List}
-          </React.Fragment>
-        ))}
+        <LegalDocumentContainer
+          title="Security Policy"
+          sections={SecurityData}
+        />
       </div>
     </section>
   );

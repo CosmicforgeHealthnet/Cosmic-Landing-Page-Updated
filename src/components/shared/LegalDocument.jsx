@@ -1,3 +1,4 @@
+import { ChevronDown, ChevronUp } from "lucide-react";
 import React from "react";
 
 function LegalDocument() {
@@ -69,20 +70,19 @@ export const DashedCategoryLabel = ({ points, size, className }) => {
   );
 };
 
-export const BulletCategoryLabel = ({ points, size, className }) => {
+// Improved BulletCategoryLabel component
+export const BulletCategoryLabel = ({ points, size, className = "" }) => {
   return (
-    <>
-      {points.map((point) => {
-        return (
-          <div className={className}>
-            <li className="text-lg  list-disc pb-4">
-              <span className={`font-bold text-xl`}></span>
-              {point.description}
-            </li>
-          </div>
-        );
-      })}
-    </>
+    <ul className={`list-disc ml-6 space-y-3 ${className}`}>
+      {points.map((point, index) => (
+        <li key={point.id || index} className="text-lg leading-relaxed pl-2">
+          <span className="font-bold text-xl">
+            {point.title && `${point.title}: `}
+          </span>
+          {point.description}
+        </li>
+      ))}
+    </ul>
   );
 };
 
@@ -131,6 +131,42 @@ export const RomanCategoryLabel = ({ points, size, className }) => {
           );
         })}
       </ol>
+    </div>
+  );
+};
+
+// New Accordion Section Component
+export const AccordionSection = ({
+  title,
+  children,
+  isOpen,
+  onToggle,
+  className = "",
+}) => {
+  return (
+    <div className={`border border-gray-50 rounded-lg mb-4 ${className}`}>
+      <button
+        onClick={onToggle}
+        className="w-full px-8 py-6 text-left  hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-inset"
+        aria-expanded={isOpen}
+      >
+        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+        {isOpen ? (
+          <ChevronUp className="h-5 w-5 text-gray-500" />
+        ) : (
+          <ChevronDown className="h-5 w-5 text-gray-500" />
+        )}
+      </button>
+
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="border-t border-gray-100 px-6 py-4 bg-white">
+          {children}
+        </div>
+      </div>
     </div>
   );
 };
