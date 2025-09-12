@@ -66,7 +66,7 @@ export const LegalDocumentContainer = ({
   };
 
   return (
-    <div className={`max-w-4xl mx-auto py-10 px-4 xl:px-0 ${className}`}>
+    <div className={` mx-auto py-10 px-4 xl:px-0 ${className}`}>
       {/* Document Header */}
       <div className="mb-8">
         {/* <Header

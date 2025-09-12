@@ -86,22 +86,22 @@ export const BulletCategoryLabel = ({ points, size, className = "" }) => {
   );
 };
 
-export const DecimalCategoryLabel = ({ points, size, className }) => {
+// Improved DecimalCategoryLabel component
+export const DecimalCategoryLabel = ({ points, size, className = "" }) => {
   return (
-    <>
-      <div className={className}>
-        {points.map((point) => {
-          return (
-            <li key={point.id} className="text-lg list-decimal pb-0">
-              <span className={`font-bold text-xl`}></span>
-              {point.description}
-            </li>
-          );
-        })}
-      </div>
-    </>
+    <ol className={`list-decimal ml-6 space-y-3 ${className}`}>
+      {points.map((point, index) => (
+        <li key={point.id || index} className="text-lg leading-relaxed pl-2">
+          <span className="font-bold text-xl">
+            {point.title && `${point.title}: `}
+          </span>
+          {point.description}
+        </li>
+      ))}
+    </ol>
   );
 };
+
 export const AlphaCategoryLabel = ({ points, size, className }) => {
   return (
     <div>
@@ -144,10 +144,10 @@ export const AccordionSection = ({
   className = "",
 }) => {
   return (
-    <div className={`border border-gray-50 rounded-lg mb-4 ${className}`}>
+    <div className={`border-gray-100 border-2 rounded-lg mb-4 ${className}`}>
       <button
         onClick={onToggle}
-        className="w-full px-8 py-6 text-left  hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-inset"
+        className="w-full px-8 py-6 text-left  hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between rounded-lg focus:outline-none focus:ring-gray-100 focus:ring-inset focus:border-0"
         aria-expanded={isOpen}
       >
         <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
