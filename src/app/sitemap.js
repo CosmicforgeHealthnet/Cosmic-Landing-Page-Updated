@@ -11,7 +11,7 @@ export default function sitemap() {
       { path: "/", changeFrequency: "weekly", priority: 1.0 },
       { path: "/about", changeFrequency: "monthly", priority: 0.9 },
       { path: "/features", changeFrequency: "monthly", priority: 0.85 },
-      { path: "/compliance", changeFrequency: "quarterly", priority: 0.7 },
+      { path: "/compliance", changeFrequency: "monthly", priority: 0.7 },
       { path: "/terms", changeFrequency: "yearly", priority: 0.5 },
       { path: "/refund", changeFrequency: "yearly", priority: 0.5 },
       { path: "/use-cases/doctors", changeFrequency: "monthly", priority: 0.6 },
