@@ -39,12 +39,12 @@ const Footer = () => {
       },
       {
          icon: Linkedin,
-         href: "https://linkedin.com/CosmicForgehealthnetlimited",
+         href: "https://www.linkedin.com/company/cosmicforge-healthnet-limited/",
          label: "LinkedIn",
       },
       {
          icon: Instagram,
-         href: "https://instagram.com/cf_healthnet",
+         href: "https://facebook.com/profile.php?id=61565802410939",
          label: "Instagram",
       },
    ];
@@ -95,7 +95,7 @@ const Footer = () => {
                         <Mail className="w-4 h-4 text-blue-400" />
                         <span>Support@cosmicforgehealthnet.com</span>
                      </div>
-                     <div
+                     {/* <div
                         className="flex items-center space-x-3 text-sm text-gray-300"
                         data-aos="slide-right"
                         data-aos-duration="500"
@@ -103,7 +103,7 @@ const Footer = () => {
                      >
                         <Phone className="w-4 h-4 text-blue-400" />
                         <span>01820202020</span>
-                     </div>
+                     </div> */}
                      <div
                         className="flex items-center space-x-3 text-sm text-gray-300"
                         data-aos="slide-right"
