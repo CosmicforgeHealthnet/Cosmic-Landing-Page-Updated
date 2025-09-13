@@ -151,8 +151,6 @@ const UseCasesData = [
   },
 ];
 function UseCaseComponent() {
-  const HeaderStyle = "mt-5 text-2xl font-bold pb-2";
-
   return (
     <section className="max-w-[1100px] mx-auto py-10 px-4 xl:px-0">
       <div>

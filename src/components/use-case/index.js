@@ -3,7 +3,7 @@ import React from "react";
 import PageHeader from "../shared/Pageheader";
 import { ScrollToTopButton } from "../ScrollToTopButton";
 import { useAnimatedScrollButton } from "@/hooks/useAnimatedScrollButton";
-import UseCaseComponent from "./useCase";
+import UseCaseComponent from "./UseCaseComponent";
 
 const UseCaseIndex = () => {
   const { scrollToTop, isButtonVisible } = useAnimatedScrollButton();
