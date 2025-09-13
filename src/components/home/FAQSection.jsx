@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState(0); // First item open by default
+  const [openIndex, setOpenIndex] = useState(0);
 
   const FaqData = [
     {
@@ -25,7 +25,7 @@ const FAQSection = () => {
     {
       label: "Can doctors access lab and pharmacy information?",
       texts:
-        "No. Patients have full autonomy and direct access to labs and pharmacies, but can share lab tests with doctors for review and to provide prescriptions directly through our platform.x",
+        "No. Patients have full autonomy and direct access to labs and pharmacies, but can share lab tests with doctors for review and to provide prescriptions directly through our platform.",
     },
     {
       label: "Can labs and pharmacies use Cosmicforge HealthNet?",

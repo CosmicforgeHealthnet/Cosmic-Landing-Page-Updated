@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/contact/page.jsx", "src/components/use-cases/doctors.jsx", "src/app/use-cases/doctors/page.jsx", "src/app/use-cases/patients/page.jsx", "src/components/use-cases/patients.jsx"  ],
   "exclude": [
     "node_modules"
   ]
