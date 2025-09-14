@@ -103,7 +103,7 @@ const Footer = () => {
                 data-aos-delay="700"
               >
                 <Mail className="w-4 h-4 text-blue-400" />
-                <span>Support@cosmicforgehealthnet.com</span>
+                <span>support@cosmicforge-healthnet.com</span>
               </div>
               {/* <div
                         className="flex items-center space-x-3 text-sm text-gray-300"
