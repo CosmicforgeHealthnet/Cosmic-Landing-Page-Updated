@@ -33,7 +33,7 @@ export async function POST(req) {
           </h2>
           
           <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${validatedData.name}</p>
+            <p><strong>Name:</strong> ${validatedData.fullname}</p>
             <p><strong>Email:</strong> ${validatedData.email}</p>
             <p><strong>Subject:</strong> ${validatedData.subject}</p>
           </div>
@@ -58,7 +58,7 @@ export async function POST(req) {
       //   text: `
       //     New Contact Form Submission
 
-      //     Name: ${validatedData.name}
+      //     Name: ${validatedData.fullname}
       //     Email: ${validatedData.email}
       //     Subject: ${validatedData.subject}
 
