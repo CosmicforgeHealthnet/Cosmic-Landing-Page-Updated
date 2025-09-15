@@ -54,7 +54,7 @@ const Footer = () => {
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/cf_healthnet?igsh=aDV0MmEzdTZ5ZXl3&utm_source=qr ",
+      href: "https://www.instagram.com/cf_healthnet?igsh=aDV0MmEzdTZ5ZXl3&utm_source=qr",
       label: "Instagram",
     },
   ];
