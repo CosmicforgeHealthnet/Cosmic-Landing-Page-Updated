@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Mail,
   Phone,
@@ -39,6 +39,7 @@ import { contactFormSchema } from "@/app/schema/contactFrom";
 const ContactUsComponent = ({ isHomeScreen }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isError, setIsError] = useState();
   const [submitStatus, setSubmitStatus] = useState(
     "idle" | "success" | "error"
   );
@@ -54,6 +55,11 @@ const ContactUsComponent = ({ isHomeScreen }) => {
       message: "",
     },
   });
+
+  // return error to default state (false)
+  useEffect(() => {
+    isError && setTimeout(() => setIsError(false), 5000);
+  }, [isError]);
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
@@ -78,6 +84,7 @@ const ContactUsComponent = ({ isHomeScreen }) => {
     } catch (error) {
       console.log(error);
       setSubmitStatus("error");
+      setIsError(true);
       setStatusMessage(
         error instanceof Error
           ? error.message
@@ -123,21 +130,25 @@ const ContactUsComponent = ({ isHomeScreen }) => {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-[1100px] mx-auto px-4 py-12 lg:py-20">
         {/* Header */}
-        <div
-          className="text-center mb-16"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-delay="100"
-        >
-          <h2
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+        {/* Display header is component is used in the homeScreen */}
+        {isHomeScreen && (
+          <div
+            className="text-center mb-16"
             data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
+            data-aos-duration="800"
+            data-aos-delay="100"
           >
-            Get In <span className="text-primary">Touch</span>
-          </h2>
-        </div>
+            <h2
+              className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              Get In <span className="text-primary">Touch</span>
+            </h2>
+          </div>
+        )}
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Form */}
           <Card
@@ -306,6 +317,15 @@ const ContactUsComponent = ({ isHomeScreen }) => {
                         </>
                       )}
                     </Button>
+
+                    {/* Error Message */}
+                    {isError && (
+                      <div className="inline-flex w-full items-center gap-2 bg-red-50 text-red-600 border-red-200 border-1 rounded-md px-4 py-1.5 text-sm font-medium mb-4">
+                        {/* <span className="w-2 h-2 bg-red-600 rounded-full"></span> */}
+                        There was an error while trying to submit. <br /> Please
+                        try again later
+                      </div>
+                    )}
                   </form>
                 </Form>
               )}

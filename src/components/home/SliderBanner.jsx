@@ -100,8 +100,8 @@ export default function HealthcareSlider() {
       </div>
 
       {/* Main Slider Container */}
-      <div className="relative container mx-auto px-6 py-16 lg:py-24">
-        <div className="relative w-full h-[500px] lg:h-[600px] rounded-3xl overflow-hidden">
+      <div className="relative container mx-auto md:px-6 md:py-16 lg:py-24">
+        <div className="relative w-full h-[300px] lg:h-[500px] rounded-3xl overflow-hidden">
           {/* Background Glow Effect */}
           {/* <motion.div
             className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl filter blur-2xl scale-110"
@@ -134,7 +134,7 @@ export default function HealthcareSlider() {
                 className="absolute inset-0 w-full h-full"
                 style={{ perspective: "1000px" }}
               >
-                <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl md:border md:border-white/10">
                   {/* Image with overlay gradient for better contrast */}
                   {/* <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20 z-10" /> */}
 
@@ -142,7 +142,7 @@ export default function HealthcareSlider() {
                     src={slides[currentSlide].image}
                     alt={slides[currentSlide].alt}
                     fill
-                    className="object-cover"
+                    className="object-contain md:object-cover h-full w-full"
                     priority={currentSlide === 0}
                     quality={90}
                   />
@@ -180,7 +180,7 @@ export default function HealthcareSlider() {
         </div>
 
         {/* Navigation Controls */}
-        <div className="flex justify-between items-center mt-8">
+        <div className="justify-between items-center mt-8 px-6 py-6 hidden md:flex">
           {/* Navigation Arrows */}
           <div className="flex gap-4">
             <motion.button

@@ -190,10 +190,10 @@ const PricingSection = () => {
               <ScrollBar orientation="horizontal" className="h-3 bg-gray-300" />
             </ScrollArea>
           </div>
-
+          {/* removed this fo now */}
           {/* Tablet: Show 2 cards per row */}
-          <div className="hidden md:block lg:hidden">
-            <div className="grid md:grid-cols-2 gap-6 px-4">
+          <div className="hidden md:hidden lg:hidden">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 px-4">
               {currentPlans.map((plan, index) => (
                 <div
                   key={plan.id}

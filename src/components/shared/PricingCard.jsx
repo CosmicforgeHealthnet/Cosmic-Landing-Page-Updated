@@ -8,6 +8,7 @@ const { getDescription, formatPrice } = require("@/utils/pricing");
 export const PricingCard = ({ plan, isPopular = false }) => {
   const [isPromoExpired, setIsPromoExpired] = useState();
   const [daysLeft, setDaysLeft] = useState();
+
   const PROMO_EXPIRY = "2025-09-30T23:59:59Z"; // End of month
 
   // Function to determine if promo has expired
@@ -18,7 +19,6 @@ export const PricingCard = ({ plan, isPopular = false }) => {
     const diffMs = expiry.getTime() - now.getTime();
     const expiresIn = Math.floor(diffMs / (1000 * 60 * 60 * 24));
     setIsPromoExpired(diffMs <= 0);
-    console.log(expiresIn);
     setDaysLeft(expiresIn);
   }, [PROMO_EXPIRY]);
 
@@ -39,7 +39,7 @@ export const PricingCard = ({ plan, isPopular = false }) => {
 
   return (
     <div
-      className={`relative whitespace-normal bg-[#FFFFFF]/60 w-[300px] max-w-[500px] mx-auto lg:mx-0 md:w-[400px] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-sm border h-[550px] lg:h-[550px] flex flex-col ${
+      className={`relative whitespace-normal bg-[#FFFFFF]/60 w-[300px] max-w-[500px] mx-auto lg:mx-0 md:w-[400px] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-sm border h-[500px] lg:h-[500px] flex flex-col ${
         isPopular ? "border-primary" : "border-gray-100"
       } hover:shadow-xl transition-all duration-300`}
     >
@@ -79,13 +79,15 @@ export const PricingCard = ({ plan, isPopular = false }) => {
             <span className="text-gray-500 text-sm sm:text-base">/month</span>
           )}
         </div>
-        {plan.originalPrice > plan.price && plan.price > 0 && (
-          <div className="mt-1">
-            <span className="text-gray-400 line-through text-sm">
-              {formatPrice(plan.originalPrice, plan.currency)}
-            </span>
-          </div>
-        )}
+        {plan.originalPrice > plan.price &&
+          plan.price >= 0 &&
+          plan.discountPercentage === 100 && (
+            <div className="mt-1">
+              <span className="text-gray-400 line-through text-sm">
+                {formatPrice(plan.originalPrice, plan.currency)}
+              </span>
+            </div>
+          )}
       </div>
 
       {/* Expiry */}
@@ -98,8 +100,9 @@ export const PricingCard = ({ plan, isPopular = false }) => {
         ""
       )}
 
+      {/* Removed this for nwp */}
       {/* Plan Details */}
-      <div className="mb-4 sm:mb-6 space-y-2 ">
+      {/* <div className="mb-4 sm:mb-6 space-y-2 ">
         {plan.familyMembers !== 1 && (
           <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
             <Check className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
@@ -131,7 +134,7 @@ export const PricingCard = ({ plan, isPopular = false }) => {
             </span>
           </div>
         )}
-      </div>
+      </div> */}
 
       {/* CTA Button */}
       <Button

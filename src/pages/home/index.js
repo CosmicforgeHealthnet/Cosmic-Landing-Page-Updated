@@ -9,14 +9,14 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <HeroNew />
       <HealthcareSlider />
       <SpecialistSection />
       <HealthcareCTASection />
       <PricingSection />
       <FAQSection />
-      <ContactUsComponent />
+      <ContactUsComponent isHomeScreen={true} />
     </div>
   );
 };
