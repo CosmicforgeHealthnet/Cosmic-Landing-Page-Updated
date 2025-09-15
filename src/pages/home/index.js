@@ -11,10 +11,10 @@ const HomePage = () => {
   return (
     <div>
       <HeroNew />
+      <HealthcareSlider />
       <SpecialistSection />
       <HealthcareCTASection />
       <PricingSection />
-      <HealthcareSlider />
       <FAQSection />
       <ContactUsComponent />
     </div>

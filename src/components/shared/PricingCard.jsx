@@ -89,11 +89,13 @@ export const PricingCard = ({ plan, isPopular = false }) => {
       </div>
 
       {/* Expiry */}
-      {!isPromoExpired && daysLeft && plan.id != "free" && (
+      {!isPromoExpired && daysLeft && plan.id != "free" ? (
         <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 border-red-200 border-1 rounded-full px-4 py-1.5 text-sm font-medium mb-4">
           <span className="w-2 h-2 bg-red-600 rounded-full"></span>
           Special offer expires in {`${daysLeft}`} days
         </div>
+      ) : (
+        ""
       )}
 
       {/* Plan Details */}
