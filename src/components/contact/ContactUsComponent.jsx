@@ -103,13 +103,13 @@ const ContactUsComponent = ({ isHomeScreen }) => {
       subDetails: "We'll respond within 24 hours",
       color: "from-blue-500 to-blue-600",
     },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
-      details: "+1 (555) 123-4567",
-      //  subDetails: "Mon-Fri, 8am-6pm EST",
-      color: "from-green-500 to-green-600",
-    },
+    // {
+    //   icon: <Phone className="w-6 h-6" />,
+    //   title: "Phone",
+    //   details: "+1 (555) 123-4567",
+    //   //  subDetails: "Mon-Fri, 8am-6pm EST",
+    //   color: "from-green-500 to-green-600",
+    // },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
