@@ -39,7 +39,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Facebook,
-      href: "https://facebook.com/cosmicforgehealthnet",
+      href: "https://facebook.com/profile.php?id=61565802410939",
       label: "Facebook",
     },
     {
@@ -54,7 +54,7 @@ const Footer = () => {
     },
     {
       icon: Instagram,
-      href: "https://facebook.com/profile.php?id=61565802410939",
+      href: "https://www.instagram.com/cf_healthnet?igsh=aDV0MmEzdTZ5ZXl3&utm_source=qr ",
       label: "Instagram",
     },
   ];
@@ -142,6 +142,7 @@ const Footer = () => {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
                     className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                     data-aos="zoom-in"
