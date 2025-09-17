@@ -39,7 +39,7 @@ export const PricingCard = ({ plan, isPopular = false }) => {
 
   return (
     <div
-      className={`relative whitespace-normal bg-[#FFFFFF]/60 w-[300px] max-w-[500px] mx-auto lg:mx-0 md:w-[400px] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-sm border h-[500px] lg:h-[500px] flex flex-col ${
+      className={`relative whitespace-normal bg-[#FFFFFF]/60 w-[300px] max-w-[500px] mx-auto lg:mx-0 md:w-[400px] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-sm border h-[500px] lg:h-[600px] flex flex-col ${
         isPopular ? "border-primary" : "border-gray-100"
       } hover:shadow-xl transition-all duration-300`}
     >
@@ -73,21 +73,19 @@ export const PricingCard = ({ plan, isPopular = false }) => {
       <div className="mb-2 sm:mb-5 lg:mb-6">
         <div className="flex items-baseline gap-1">
           <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
-            {formatPrice(plan.price, plan.currency, plan.discountPercentage)}
+            {formatPrice(plan.price, plan.currency, plan.discountPercentage)}{" "}
           </span>
           {plan.price > 0 && (
             <span className="text-gray-500 text-sm sm:text-base">/month</span>
           )}
         </div>
-        {plan.originalPrice > plan.price &&
-          plan.price >= 0 &&
-          plan.discountPercentage === 100 && (
-            <div className="mt-1">
-              <span className="text-gray-400 line-through text-sm">
-                {formatPrice(plan.originalPrice, plan.currency)}
-              </span>
-            </div>
-          )}
+        {plan.originalPrice > plan.price && plan.price >= 0 && (
+          <div className="mt-1">
+            <span className="text-gray-400 line-through text-base">
+              {formatPrice(plan.originalPrice, plan.currency)}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Expiry */}

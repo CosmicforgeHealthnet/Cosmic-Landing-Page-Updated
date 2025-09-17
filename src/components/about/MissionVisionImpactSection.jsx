@@ -76,15 +76,15 @@ const MissionVisionImpactSection = () => {
   ];
 
   return (
-    <section className="w-full py-20 relative px-6 bg-[#F8F8F8]">
-      <div className="bg-[#9096F8] w-[400px] h-[400px] blur-[100px] absolute top-[50%] left-[-8rem]"></div>
+    <section className="w-full py-20 relative px-6 bg-[#010F42]">
+      {/* <div className="bg-[#9096F8] w-[400px] h-[400px] blur-[100px] absolute top-[50%] left-[-8rem]"></div> */}
       {/* <div className="bg-[#03c80095] w-[400px] h-[400px] blur-[100px] absolute top-0 right-[-8rem]"></div> */}
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4">
-            Our Mission, Vision and Impact
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            Our Mission & Vision
           </h2>
         </div>
 
@@ -93,14 +93,11 @@ const MissionVisionImpactSection = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group relative bg-[#E1E1E1]/50 backdrop-blur-sm rounded-[10px] h-[400px] border border-[#EAEAEA] transition-all duration-300 cursor-pointer"
+              className="group relative bg-white/20 backdrop-blur-sm rounded-[10px] h-[600px] border border-[#EAEAEA] transition-all duration-300 cursor-pointer"
               style={{ perspective: "1000px" }}
             >
               {/* Card Inner Container */}
-              <div
-                className="relative w-full h-full transition-transform duration-700 group-hover:rotate-y-180"
-                style={{ transformStyle: "preserve-3d" }}
-              >
+              <div className="relative w-full h-full transition-transform duration-700">
                 {/* Front Side */}
                 <div className="absolute inset-0 w-full h-full p-8 flex flex-col justify-between backface-hidden">
                   <div className="space-y-6">
@@ -108,28 +105,17 @@ const MissionVisionImpactSection = () => {
                     <div className="flex justify-center">{card.icon}</div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-black text-center">
+                    <h3 className="text-2xl font-bold text-white text-center">
                       {card.title}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <div className="flex-1 flex items-center px-10">
-                    <p className="text-gray-700 text-base leading-relaxed text-center">
+                  <div className="flex-1 flex-col items-center px-10">
+                    <p className="text-white text-base leading-relaxed text-starts">
                       {card.description}
                     </p>
-                  </div>
-                </div>
-                {/* Back Side */}
-                <div
-                  className="absolute inset-0 w-full h-full p-8 flex flex-col justify-center items-center bg-[#E1E1E1]/70 backdrop-blur-sm rounded-[10px] border border-[#EAEAEA]"
-                  style={{
-                    transform: "rotateY(180deg)",
-                    backfaceVisibility: "hidden",
-                  }}
-                >
-                  <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-bold text-primary text-left">
+                    <h3 className="font-bold text-primary text-left">
                       {card.subDescription || "More Info"}
                     </h3>
                     {card.List && card.List}
@@ -161,7 +147,7 @@ const BulletCategoryLabel = ({ points, size, className = "" }) => {
       {points.map((point, index) => (
         <li
           key={point.id || index}
-          className="text-lg leading-relaxed pl-2 text-left"
+          className="leading-relaxed pl-2 text-left text-white"
         >
           <span className="font-bold text-xl">
             {point.title && `${point.title}: `}

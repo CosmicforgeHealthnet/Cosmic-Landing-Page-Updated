@@ -1,10 +1,77 @@
+const images = [
+  {
+    src: "/featuresImg/TeleMed.jpg",
+    alt: "Telemedicine Feature",
+    title: "Telemedicine",
+    description:
+      "We provide secure video consultations, audio conference calling, real time chats and remote monitoring. you can connect with your doctor from anywhere while maintaining the quality of an in person visit.",
+    code: "# 23",
+  },
+  {
+    src: "/featuresImg/PatMg.jpg",
+    alt: "Patient Management Feature",
+    title: "Patient Management",
+    description:
+      "We centralize your medical history, prescriptions, hospitalizations and vaccination records in one place. We ensure continuity of care and make it easier for providers to access accurate information. ",
+    code: "# 23",
+  },
+  {
+    src: "/featuresImg/Pharmacy.jpg",
+    alt: "Pharmacy Feature",
+    title: "Pharmacy",
+    description:
+      "We link prescriptions directly to partner pharmacies. Patients receive timely updates, while pharmacies manage orders, inventory, and patient notifications in a secure system.",
+    code: "# 23",
+  },
+  {
+    src: "/featuresImg/Lab.jpg",
+    alt: "Lab Feature",
+    title: "Lab",
+    description:
+      "We simplify lab processes with digital test orders, result entry, and direct sharing with patients to shorten the turnaround time for critical results.",
+    code: "# 23",
+  },
+  {
+    src: "/featuresImg/medTour.jpg",
+    alt: "Medical Tour Feature",
+    title: "Medical Tour",
+    description:
+      "We support patients traveling for care with our Partners. You track every stage, from departure to recovery, with full visibility for patients.",
+    code: "# 23",
+  },
+  {
+    src: "/featuresImg/AiTools.jpg",
+    alt: "AI Tools Feature",
+    title: "AI Tools",
+    description:
+      "We bring intelligence into care delivery. Patients use AI symptom checkers for early insights, and Doctors benefit from AI-supported diagnosis, pattern detection, and treatment recommendations based on patient data.",
+    code: "# 23",
+  },
+  {
+    src: "/featuresImg/ArVr.jpg",
+    alt: "AR VR Features",
+    title: "AR VR",
+    description:
+      "We enhance consultations with immersive technology. Doctors explain conditions more clearly, and patients understand care plans through interactive visual experiences.",
+    code: "# 23",
+  },
+  {
+    src: "/featuresImg/vidCall.jpg",
+    alt: "Virtual Communities Features",
+    title: "Virtual Communities",
+    description:
+      "We create trusted spaces where patients and doctors connect, share experiences, and exchange knowledge. Our communities ensure collaboration, education, and support beyond clinical visits.",
+    code: "# 23",
+  },
+];
+
 export const Features = [
   {
     id: 1,
-    title: "Unified Health Care Hub",
-    img: "/features/healthcarehub.png",
+    title: "Telemedicine",
+    img: "/featuresImg/TeleMed.jpg",
     subtitle:
-      "A unified platform connecting doctors, patients, labs, and pharmacies seamlessly",
+      "We provide secure video consultations, audio conference calling, real time chats and remote monitoring. you can connect with your doctor from anywhere while maintaining the quality of an in person visit.",
     description: {
       paragraphs: [
         {
@@ -32,9 +99,10 @@ export const Features = [
   },
   {
     id: 2,
-    title: "User-Centric Design",
-    img: "/features/healthcarehub.png",
-    subtitle: "Intuitive, role-based interfaces tailored for each user type.",
+    title: "Patient Management",
+    img: "/featuresImg/PatMg.jpg",
+    subtitle:
+      "We centralize your medical history, prescriptions, hospitalizations and vaccination records in one place. We ensure continuity of care and make it easier for providers to access accurate information. ",
     description: {
       paragraphs: [
         {
@@ -62,10 +130,10 @@ export const Features = [
   },
   {
     id: 3,
-    title: "AI Health Assist",
-    img: "/features/AIAssist.png",
+    title: "Lab",
+    img: "/featuresImg/Lab.jpg",
     subtitle:
-      "Advanced features like robotic virtual diagnosis and Chat Bot virtual health assistant.",
+      "We simplify lab processes with digital test orders, result entry, and direct sharing with patients to shorten the turnaround time for critical results.",
     description: {
       paragraphs: [
         {
@@ -89,10 +157,91 @@ export const Features = [
   },
   {
     id: 4,
-    title: "Simplified Processes",
-    img: "/features/Appointment.png",
+    title: "Medical Tour",
+    img: "/featuresImg/medTour.jpg",
     subtitle:
-      "Simplified process to schedule appointments, manage tests and prescriptions.",
+      "We support patients traveling for care with our Partners. You track every stage, from departure to recovery, with full visibility for patients.",
+    description: {
+      paragraphs: [
+        {
+          paragraph:
+            "At CosmicForge Health Net, we believe that healthcare should be efficient and straightforward. Our Simplified Processes feature ensures that every task from appointment booking to prescription fulfillment is streamlined, making healthcare management smoother for all users.",
+        },
+        {
+          paragraph:
+            "For doctors, this means effortless patient scheduling, easy access to medical histories, and quick documentation of consultations. Patients can book appointments, access their health data, and communicate with their healthcare providers in just a few clicks. Laboratories and pharmacies benefit from automated workflows, allowing them to process test results, manage inventory, and fulfill prescriptions without the usual hassles.",
+        },
+        {
+          paragraph:
+            "By reducing administrative tasks and eliminating unnecessary steps, our Simplified Processes feature frees up time for healthcare professionals to focus on what matters most: delivering quality care. This efficiency extends to patients, who experience faster service and a more personalized healthcare journey.",
+        },
+        {
+          paragraph:
+            "Experience hassle-free healthcare management with CosmicForge’s Simplified Processes where every step is designed to save time and enhance care.",
+        },
+      ],
+    },
+  },
+  {
+    id: 5,
+    title: "AI Tools Feature",
+    img: "/featuresImg/AiTools.jpg",
+    subtitle:
+      "We bring intelligence into care delivery. Patients use AI symptom checkers for early insights, and Doctors benefit from AI-supported diagnosis, pattern detection, and treatment recommendations based on patient data.",
+    description: {
+      paragraphs: [
+        {
+          paragraph:
+            "At CosmicForge Health Net, we believe that healthcare should be efficient and straightforward. Our Simplified Processes feature ensures that every task from appointment booking to prescription fulfillment is streamlined, making healthcare management smoother for all users.",
+        },
+        {
+          paragraph:
+            "For doctors, this means effortless patient scheduling, easy access to medical histories, and quick documentation of consultations. Patients can book appointments, access their health data, and communicate with their healthcare providers in just a few clicks. Laboratories and pharmacies benefit from automated workflows, allowing them to process test results, manage inventory, and fulfill prescriptions without the usual hassles.",
+        },
+        {
+          paragraph:
+            "By reducing administrative tasks and eliminating unnecessary steps, our Simplified Processes feature frees up time for healthcare professionals to focus on what matters most: delivering quality care. This efficiency extends to patients, who experience faster service and a more personalized healthcare journey.",
+        },
+        {
+          paragraph:
+            "Experience hassle-free healthcare management with CosmicForge’s Simplified Processes where every step is designed to save time and enhance care.",
+        },
+      ],
+    },
+  },
+  {
+    id: 6,
+    title: "AR VR Feature",
+    img: "/featuresImg/ArVr.jpg",
+    subtitle:
+      "We enhance consultations with immersive technology. Doctors explain conditions more clearly, and patients understand care plans through interactive visual experiences.",
+    description: {
+      paragraphs: [
+        {
+          paragraph:
+            "At CosmicForge Health Net, we believe that healthcare should be efficient and straightforward. Our Simplified Processes feature ensures that every task from appointment booking to prescription fulfillment is streamlined, making healthcare management smoother for all users.",
+        },
+        {
+          paragraph:
+            "For doctors, this means effortless patient scheduling, easy access to medical histories, and quick documentation of consultations. Patients can book appointments, access their health data, and communicate with their healthcare providers in just a few clicks. Laboratories and pharmacies benefit from automated workflows, allowing them to process test results, manage inventory, and fulfill prescriptions without the usual hassles.",
+        },
+        {
+          paragraph:
+            "By reducing administrative tasks and eliminating unnecessary steps, our Simplified Processes feature frees up time for healthcare professionals to focus on what matters most: delivering quality care. This efficiency extends to patients, who experience faster service and a more personalized healthcare journey.",
+        },
+        {
+          paragraph:
+            "Experience hassle-free healthcare management with CosmicForge’s Simplified Processes where every step is designed to save time and enhance care.",
+        },
+      ],
+    },
+  },
+  {
+    id: 7,
+    title: "Virtual Communities",
+    img: "/featuresImg/vidCall.jpg",
+    subtitle:
+      "We create trusted spaces where patients and doctors connect, share experiences, and exchange knowledge. Our communities ensure collaboration, education, and support beyond clinical visits.",
     description: {
       paragraphs: [
         {

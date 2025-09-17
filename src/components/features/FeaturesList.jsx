@@ -107,8 +107,8 @@ function FeaturesList({ setStep, setSelectedFeature }) {
         <motion.div
           key={feature.id}
           variants={cardVariants}
-          onClick={() => handleFeatureSelect(feature)}
-          className="cursor-pointer sm:h-[300px] h-[400px] w-[500px] sm:w-[400px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[450px] xl:h-[400px] xl:w-[500px] relative overflow-hidden space-x-2 backdrop-blur-2xl bg-gradient-to-bl to-60% from-20% from-white to-[#9096F829] border-r-0 border-[#DBDDF5] border-l-3 border-b-3 rounded-2xl px-4"
+          // onClick={() => handleFeatureSelect(feature)}
+          className="cursor-pointer sm:h-[300px] h-[400px] w-[500px] sm:w-[400px] md:h-[350px] md:w-[350px] lg:h-[500px] lg:w-[450px] xl:h-[400px] xl:w-[500px] relative overflow-hidden space-x-2 backdrop-blur-2xl bg-gradient-to-bl to-60% from-20% from-white to-[#9096F829] border-r-0 border-[#DBDDF5] border-l-3 border-b-3 rounded-2xl px-4"
           whileHover={{
             x: -5,
             boxShadow: "0 20px 40px rgba(144, 150, 248, 0.15)",
@@ -127,28 +127,28 @@ function FeaturesList({ setStep, setSelectedFeature }) {
         >
           {/* Animated blur effect */}
           <motion.div
-            className="h-full w-2/5 bg-white absolute z-10 -right-10 blur-xl border"
+            className="h-full w-2/5 bg-[#08109C66] absolute z-10 -right-10 blur-xl border"
             variants={blurVariants}
             initial="hidden"
             animate="visible"
           />
 
-          {/* Animated image */}
-          <motion.img
-            src={feature.img}
-            alt=""
-            width={450}
-            height={450}
-            className="absolute -top-5 -right-0"
-            variants={imageVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover={{
-              scale: 1.05,
-              rotate: 2,
-              transition: { duration: 0.3 },
-            }}
-          />
+          <div className="absolute -top-5 -right-2  w-[450px] h-[250px] overflow-hidden">
+            {/* Animated image */}
+            <motion.img
+              src={feature.img}
+              alt=""
+              className="rounded-bl-2xl w-full h-full  object-cover"
+              variants={imageVariants}
+              initial="hidden"
+              animate="visible"
+              whileHover={{
+                scale: 1.05,
+                rotate: 2,
+                transition: { duration: 0.3 },
+              }}
+            />
+          </div>
 
           {/* Animated text content */}
           <motion.div
@@ -158,7 +158,7 @@ function FeaturesList({ setStep, setSelectedFeature }) {
             animate="visible"
           >
             <motion.h1
-              className="font-semibold text-3xl"
+              className="font-semibold text-3xl text-primary"
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2 },
@@ -167,7 +167,7 @@ function FeaturesList({ setStep, setSelectedFeature }) {
               {feature.title}
             </motion.h1>
             <motion.p
-              className="max-w-4/5"
+              className="max-w-[80%] md:max-w-[90%]"
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
