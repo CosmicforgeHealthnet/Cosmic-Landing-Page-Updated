@@ -11,7 +11,7 @@ const IntegrationsIndex = () => {
   return (
     <div>
       <PageHeader
-        title="Terms and Conditions"
+        title="Integrations"
         gradient="from-blue-400 via-purple-400 to-green-300"
       />
       <IntegrationsContent />

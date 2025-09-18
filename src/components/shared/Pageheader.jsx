@@ -10,7 +10,7 @@ const PageHeader = ({
   subtitleSize = "text-lg lg:text-xl",
   height = "h-64 lg:h-80",
   titleColor = "text-white/20",
-  subtitleColor = "text-gray-700",
+  subtitleColor = "text-white",
   className = "",
   backButton,
 }) => {
@@ -28,12 +28,14 @@ const PageHeader = ({
 
       <div className="h-full flex items-center mx-auto w-full  ">
         <div className="space-y-4 relative z-10  ">
-          <h1 className={`${titleSize} md:-px-10 font-bold ${titleColor} `}>
+          <h1
+            className={`${titleSize} md:-px-10 px-3 font-bold ${titleColor} `}
+          >
             {title}{" "}
             <span className="text-[#272EA7]">{styledTitle && styledTitle}</span>
           </h1>
           {subtitle && (
-            <p className={`${subtitleSize} ${subtitleColor} max-w-3xl`}>
+            <p className={`${subtitleSize} ${subtitleColor} max-w-3xl px-3`}>
               {subtitle}
             </p>
           )}

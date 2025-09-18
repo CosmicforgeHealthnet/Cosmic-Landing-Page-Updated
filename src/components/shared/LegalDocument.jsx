@@ -144,7 +144,7 @@ export const AccordionSection = ({
   className = "",
 }) => {
   return (
-    <div className={`border-gray-100 border-2 rounded-lg mb-4 ${className}`}>
+    <div className={`border-gray-100 border-2 rounded-lg mb-4  ${className}`}>
       <button
         onClick={onToggle}
         className="w-full px-8 py-6 text-left  hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between rounded-lg focus:outline-none focus:ring-gray-100 focus:ring-inset focus:border-0"
@@ -160,10 +160,10 @@ export const AccordionSection = ({
 
       <div
         className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-gray-100 px-6 py-4 bg-white">
+        <div className="border-t border-gray-100 px-6 py-4 bg-white ">
           {children}
         </div>
       </div>

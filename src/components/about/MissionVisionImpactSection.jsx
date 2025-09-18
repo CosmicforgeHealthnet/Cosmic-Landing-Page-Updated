@@ -93,7 +93,7 @@ const MissionVisionImpactSection = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group relative bg-white/20 backdrop-blur-sm rounded-[10px] h-[600px] border border-[#EAEAEA] transition-all duration-300 cursor-pointer"
+              className="group relative bg-white/20 backdrop-blur-sm rounded-[10px] h-[680px] md:h-[600px] border border-[#EAEAEA] transition-all duration-300 cursor-pointer"
               style={{ perspective: "1000px" }}
             >
               {/* Card Inner Container */}
@@ -111,11 +111,11 @@ const MissionVisionImpactSection = () => {
                   </div>
 
                   {/* Description */}
-                  <div className="flex-1 flex-col items-center px-10">
+                  <div className="flex-1 flex-col items-center md:px-10">
                     <p className="text-white text-base leading-relaxed text-starts">
                       {card.description}
                     </p>
-                    <h3 className="font-bold text-primary text-left">
+                    <h3 className="font-bold text-white text-left">
                       {card.subDescription || "More Info"}
                     </h3>
                     {card.List && card.List}

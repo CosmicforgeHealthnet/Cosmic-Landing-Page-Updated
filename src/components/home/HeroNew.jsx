@@ -4,30 +4,7 @@ import Hero from "../carouselComponents/Hero";
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import Image from "next/image";
-
-const slides = [
-  {
-    id: 1,
-    image: "/banners/AR_VR.png",
-    alt: "AR & VR Coming Soon",
-  },
-  {
-    id: 2,
-    image: "/banners/Pharmacy.png",
-    alt: "Pharmacy Coming Soon",
-  },
-  {
-    id: 3,
-    image: "/banners/Lab.png",
-    alt: "Lab Coming Soon",
-  },
-  {
-    id: 4,
-    image: "/banners/Shop.png",
-    alt: "Shop Coming Soon",
-  },
-];
+import ComingSoonComponent from "../carouselComponents/ComingSoonComponent";
 
 const CarouselItems = [
   {
@@ -37,58 +14,98 @@ const CarouselItems = [
   {
     id: "ad1",
     content: (
-      <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
-        <Image
-          src={slides[0].image}
-          alt={slides[0].alt}
-          fill
-          className="object-contain md:object-contain h-full w-full"
-          quality={90}
-        />
-      </div>
+      <ComingSoonComponent
+        title={"ARVR"}
+        img={"/featuresImg/ArVr.png"}
+        description={"Streamlining healthcare services to meet your needs..."}
+        subDescription={
+          "Get Ready for smarter, faster and more personalized experience"
+        }
+      />
     ),
+    // (
+    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
+    //     <Image
+    //       src={slides[0].image}
+    //       alt={slides[0].alt}
+    //       fill
+    //       className="object-contain md:object-contain h-full w-full"
+    //       quality={90}
+    //     />
+    //   </div>
+    // ),
   },
   {
-    id: "ad1",
+    id: "ad2",
     content: (
-      <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
-        <Image
-          src={slides[1].image}
-          alt={slides[1].alt}
-          fill
-          className="object-contain md:object-contain h-full w-full"
-          quality={90}
-        />
-      </div>
+      <ComingSoonComponent
+        title={"Pharmacy"}
+        img={"/featuresImg/pharmacyHero.png"}
+        description={"Streamlining healthcare services to meet your needs..."}
+        subDescription={
+          "Get Ready for smarter, faster and more personalized experience"
+        }
+      />
     ),
+    //  (
+    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
+    //     <Image
+    //       src={slides[1].image}
+    //       alt={slides[1].alt}
+    //       fill
+    //       className="object-contain md:object-contain h-full w-full"
+    //       quality={90}
+    //     />
+    //   </div>
+    // ),
   },
   {
-    id: "ad1",
+    id: "ad3",
     content: (
-      <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
-        <Image
-          src={slides[2].image}
-          alt={slides[2].alt}
-          fill
-          className="object-contain md:object-contain h-full w-full"
-          quality={90}
-        />
-      </div>
+      <ComingSoonComponent
+        title={"Lab"}
+        img={"/featuresImg/comingSoonLab.png"}
+        description={"Streamlining healthcare services to meet your needs..."}
+        subDescription={
+          "Get Ready for smarter, faster and more personalized experience"
+        }
+      />
     ),
+    //  (
+    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
+    //     <Image
+    //       src={slides[2].image}
+    //       alt={slides[2].alt}
+    //       fill
+    //       className="object-contain md:object-contain h-full w-full"
+    //       quality={90}
+    //     />
+    //   </div>
+    // ),
   },
   {
-    id: "ad1",
+    id: "ad4",
     content: (
-      <div className="relative w-full h-full  overflow-hidden shadow-2xl  md:border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border-white/10">
-        <Image
-          src={slides[3].image}
-          alt={slides[3].alt}
-          fill
-          className="object-contain md:object-contain h-full w-full"
-          quality={90}
-        />
-      </div>
+      <ComingSoonComponent
+        title={"Shop"}
+        img={"/featuresImg/shop.png"}
+        description={"Streamlining healthcare services to meet your needs..."}
+        subDescription={
+          "Get Ready for smarter, faster and more personalized experience"
+        }
+      />
     ),
+    // (
+    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl  md:border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border-white/10">
+    //     <Image
+    //       src={slides[3].image}
+    //       alt={slides[3].alt}
+    //       fill
+    //       className="object-contain md:object-contain h-full w-full"
+    //       quality={90}
+    //     />
+    //   </div>
+    // ),
   },
 ];
 
@@ -102,7 +119,10 @@ const HeroNew = () => {
         <Carousel
           plugins={[plugin.current]}
           className="w-full"
-          // onMouseEnter={plugin.current.stop}
+          opts={{
+            loop: true,
+            align: "start",
+          }}
           // onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>

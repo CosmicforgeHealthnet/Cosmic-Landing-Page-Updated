@@ -25,14 +25,29 @@ const PrivacyPolicyData = [
     header: "How we use your data",
     description:
       "The information we collect or that you provide on or through our Sites or by using our services includes:",
-    isList: true,
-    List: (
-      <BulletCategoryLabel
-        points={DataUsePoints}
-        className="flex flex-col gap-5"
-      />
-    ),
+    isList: false,
+    // List: (
+    //   <BulletCategoryLabel
+    // points={DataUsePoints}
+    //     className="flex flex-col gap-5"
+    //   />
+    // ),
     subDescription: [
+      {
+        description: `Data that may personally identify you, including your name, postal address, billing address, shipping address, e-mail address, home, work and mobile telephone numbers, age, date of birth, social security number, insurance policy number, physical characteristics that may personally identify you, sexual orientation, IP address, bank account number, credit or debit card number (for payment purposes only), national origin, ancestry, veteran or military status, medical conditions, race, citizenship, information about any physical or mental disabilities you may have, information related to your religious or philosophical beliefs, political opinions, information regarding your gender at birth and how you currently express your gender identity, information related to your sex life, such as pregnancy, child birth and related medical conditions, any history of criminal convictions, biometric information (such as fingerprints, exercise data, psychological characteristics, face prints, gait patterns, genetics, behavioral characteristics, voice, sleep data, and iris/retina scans), and genetic information (including familial genetic information) (collectively, “Personal Data”);`,
+      },
+      {
+        description: `Information that you provide by filling in forms on our Sites, such as appointment request forms or product ordering forms. It also includes information you provide when you register to use our Sites, purchase products, or use services available through the Sites or facilities. We may also ask you for information when you report a problem with our Sites. Some forms collect sensitive information, such as health information, necessary for us to provide our services to you;.`,
+      },
+      {
+        description: `Records and copies of your correspondence (including email addresses), if you contact us;`,
+      },
+      {
+        description: `Your responses to surveys that we might ask you to complete for research, development, and marketing purposes; and`,
+      },
+      {
+        description: `Details of transactions you carry out through our Sites and of the fulfillment of your orders. You may be required to provide financial information before placing an order through our Sites.`,
+      },
       {
         description: `You also may provide information to be published or displayed (hereinafter, "Posted") on public areas of the Sites or transmitted to other users of the Sites or third parties (collectively, "User Contributions"). Your User Contributions are Posted on and transmitted to others at your own risk. Although we limit access to certain pages, please be aware that no security measures are perfect or impenetrable. Additionally, we cannot control the actions of other users of the Sites with whom you may choose to share your User Contributions. Therefore, we cannot and do not guarantee that your User Contributions will not be viewed by unauthorized persons.`,
       },

@@ -3,22 +3,22 @@ export const DataUsePoints = [
     id: 1,
     description: `Data that may personally identify you, including your name, postal address, billing address, shipping address, e-mail address, home, work and mobile telephone numbers, age, date of birth, social security number, insurance policy number, physical characteristics that may personally identify you, sexual orientation, IP address, bank account number, credit or debit card number (for payment purposes only), national origin, ancestry, veteran or military status, medical conditions, race, citizenship, information about any physical or mental disabilities you may have, information related to your religious or philosophical beliefs, political opinions, information regarding your gender at birth and how you currently express your gender identity, information related to your sex life, such as pregnancy, child birth and related medical conditions, any history of criminal convictions, biometric information (such as fingerprints, exercise data, psychological characteristics, face prints, gait patterns, genetics, behavioral characteristics, voice, sleep data, and iris/retina scans), and genetic information (including familial genetic information) (collectively, “Personal Data”);`,
   },
-  {
-    id: 2,
-    description: `Information that you provide by filling in forms on our Sites, such as appointment request forms or product ordering forms. It also includes information you provide when you register to use our Sites, purchase products, or use services available through the Sites or facilities. We may also ask you for information when you report a problem with our Sites. Some forms collect sensitive information, such as health information, necessary for us to provide our services to you;.`,
-  },
-  {
-    id: 3,
-    description: `Records and copies of your correspondence (including email addresses), if you contact us;`,
-  },
-  {
-    id: 4,
-    description: `Your responses to surveys that we might ask you to complete for research, development, and marketing purposes; and`,
-  },
-  {
-    id: 5,
-    description: `Details of transactions you carry out through our Sites and of the fulfillment of your orders. You may be required to provide financial information before placing an order through our Sites.`,
-  },
+  // {
+  //   id: 2,
+  //   description: `Information that you provide by filling in forms on our Sites, such as appointment request forms or product ordering forms. It also includes information you provide when you register to use our Sites, purchase products, or use services available through the Sites or facilities. We may also ask you for information when you report a problem with our Sites. Some forms collect sensitive information, such as health information, necessary for us to provide our services to you;.`,
+  // },
+  // {
+  //   id: 3,
+  //   description: `Records and copies of your correspondence (including email addresses), if you contact us;`,
+  // },
+  // {
+  //   id: 4,
+  //   description: `Your responses to surveys that we might ask you to complete for research, development, and marketing purposes; and`,
+  // },
+  // {
+  //   id: 5,
+  //   description: `Details of transactions you carry out through our Sites and of the fulfillment of your orders. You may be required to provide financial information before placing an order through our Sites.`,
+  // },
 ];
 
 export const InformationWeCollectPoints = [
@@ -111,7 +111,7 @@ export const HowWeUseSurveyInformation = [
   {
     id: 13,
     description:
-      "recognize and/or authenticate you when you return to our Sites.",
+      "Recognize and/or authenticate you when you return to our Sites.",
   },
 ];
 

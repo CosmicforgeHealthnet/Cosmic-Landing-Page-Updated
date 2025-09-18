@@ -11,7 +11,7 @@ const RefundPolicyIndex = () => {
   return (
     <div>
       <PageHeader
-        title="Refund & Cancellation Policy"
+        title="Refund Policy"
         gradient="from-blue-400 via-purple-400 to-green-300"
       />
       <RefundPolicyContent />
