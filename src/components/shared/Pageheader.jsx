@@ -6,7 +6,7 @@ const PageHeader = ({
   styledTitle,
   subtitle,
   gradient = "from-blue-400 via-purple-400 to-green-300",
-  titleSize = "text-5xl lg:text-[140px]",
+  titleSize = "text-[60px] lg:text-[140px]",
   subtitleSize = "text-lg lg:text-xl",
   height = "h-64 lg:h-80",
   titleColor = "text-white/20",
@@ -28,7 +28,7 @@ const PageHeader = ({
 
       <div className="h-full flex items-center mx-auto w-full  ">
         <div className="space-y-4 relative z-10  ">
-          <h1 className={`${titleSize} -px-10 font-bold ${titleColor} `}>
+          <h1 className={`${titleSize} md:-px-10 font-bold ${titleColor} `}>
             {title}{" "}
             <span className="text-[#272EA7]">{styledTitle && styledTitle}</span>
           </h1>
