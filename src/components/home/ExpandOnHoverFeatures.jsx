@@ -92,13 +92,13 @@ export const ExpandOnHoverFeatures = () => {
   };
   return (
     <div className="flex flex-col w-full mt-8">
-      <div className="space-y-6 max-w-[1100px] mx-auto ">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div className="space-y-6 max-w-[1100px]">
+        <div className="grid grid-cols-2 gap-12 px-10 ">
           <h2 className="text-[30px] lg:text-5xl font-semibold text-gray-900 leading-tight">
             <span className="text-[#272EA7]">Features</span>
           </h2>
           <div className="space-y-4">
-            <p className="text-lg text-black leading-relaxed opacity-0">
+            <p className="text-lg text-black leading-relaxed opacity-0 hidden">
               Skip the referral maze and book a board-certified cardiologist,
               dermatologist, or any other expert for a same-day video
               visit—right from your phone.
