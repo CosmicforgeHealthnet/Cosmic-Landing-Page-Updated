@@ -39,7 +39,7 @@ export const PricingCard = ({ plan, isPopular = false }) => {
 
   return (
     <div
-      className={`relative whitespace-normal bg-[#FFFFFF]/60 w-[300px] max-w-[500px] mx-auto lg:mx-0 md:w-[400px] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-sm border h-[500px] lg:h-[600px] flex flex-col ${
+      className={`relative whitespace-normal bg-[#FFFFFF]/60 w-[300px] max-w-[500px] mx-auto lg:mx-0 md:w-[400px] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-sm border h-[600px] lg:h-[600px] flex flex-col ${
         isPopular ? "border-primary" : "border-gray-100"
       } hover:shadow-xl transition-all duration-300`}
     >

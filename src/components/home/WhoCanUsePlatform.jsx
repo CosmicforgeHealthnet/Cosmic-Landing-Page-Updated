@@ -84,7 +84,7 @@ function WhoCanUsePlatform() {
               data-aos-duration="800"
               data-aos-delay="500"
             >
-              <h1 className=" hidden md:block absolute -right-2.5 -bottom-64 z-2 lg:text-right font-bold text-[50px] md:text-[450px] opacity-100! text-white/50">
+              <h1 className="hidden md:block absolute -right-2.5 -bottom-64 z-2 lg:text-right font-bold text-[50px] md:text-[450px] opacity-100! text-white/50">
                 ?
               </h1>
               <h1 className="hidden md:block absolute right-40 -bottom-72 z-10 lg:text-right font-bold text-[50px] md:text-[390px] opacity-100! text-white/50">
