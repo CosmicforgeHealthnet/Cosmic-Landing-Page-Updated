@@ -10,7 +10,7 @@ const images = [
     title: "Telemedicine",
     description:
       "We provide secure video consultations, audio conference calling, real time chats and remote monitoring. you can connect with your doctor from anywhere while maintaining the quality of an in person visit.",
-    code: "# 23",
+    code: "",
   },
   {
     src: "/featuresImg/PatMg.jpg",
@@ -18,7 +18,7 @@ const images = [
     title: "Patient Management",
     description:
       "We centralize your medical history, prescriptions, hospitalizations and vaccination records in one place. We ensure continuity of care and make it easier for providers to access accurate information. ",
-    code: "# 23",
+    code: "",
   },
   {
     src: "/featuresImg/Pharmacy.jpg",
@@ -26,7 +26,7 @@ const images = [
     title: "Pharmacy",
     description:
       "We link prescriptions directly to partner pharmacies. Patients receive timely updates, while pharmacies manage orders, inventory, and patient notifications in a secure system.",
-    code: "# 23",
+    code: "",
   },
   {
     src: "/featuresImg/Lab.jpg",
@@ -34,7 +34,7 @@ const images = [
     title: "Lab",
     description:
       "We simplify lab processes with digital test orders, result entry, and direct sharing with patients to shorten the turnaround time for critical results.",
-    code: "# 23",
+    code: "",
   },
   {
     src: "/featuresImg/medTour.jpg",
@@ -42,7 +42,7 @@ const images = [
     title: "Medical Tour",
     description:
       "We support patients traveling for care with our Partners. You track every stage, from departure to recovery, with full visibility for patients.",
-    code: "# 23",
+    code: "",
   },
   {
     src: "/featuresImg/AiTools.jpg",
@@ -50,7 +50,7 @@ const images = [
     title: "AI Tools",
     description:
       "We bring intelligence into care delivery. Patients use AI symptom checkers for early insights, and Doctors benefit from AI-supported diagnosis, pattern detection, and treatment recommendations based on patient data.",
-    code: "# 23",
+    code: "",
   },
   {
     src: "/featuresImg/ArVr.jpg",
@@ -58,7 +58,7 @@ const images = [
     title: "AR VR",
     description:
       "We enhance consultations with immersive technology. Doctors explain conditions more clearly, and patients understand care plans through interactive visual experiences.",
-    code: "# 23",
+    code: "",
   },
   {
     src: "/featuresImg/vidCall.jpg",
@@ -66,7 +66,7 @@ const images = [
     title: "Virtual Communities",
     description:
       "We create trusted spaces where patients and doctors connect, share experiences, and exchange knowledge. Our communities ensure collaboration, education, and support beyond clinical visits.",
-    code: "# 23",
+    code: "",
   },
 ];
 export const ExpandOnHoverFeatures = () => {
