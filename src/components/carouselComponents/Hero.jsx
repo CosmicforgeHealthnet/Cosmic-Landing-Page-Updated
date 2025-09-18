@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <div className="min-h-screen pt-7 px-4 lg:px-0">
-      <div className="max-w-[1340px] mx-auto h-full">
+      <div className="max-w-[1100px] mx-auto h-full">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-5 items-center justify-between min-h-screen py-8 lg:py-0">
           {/* Left Content */}
           <div className="">

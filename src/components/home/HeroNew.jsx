@@ -15,7 +15,7 @@ const CarouselItems = [
     id: "ad1",
     content: (
       <ComingSoonComponent
-        title={"ARVR"}
+        title={"AR & VR"}
         img={"/featuresImg/ArVr.png"}
         description={"Streamlining healthcare services to meet your needs..."}
         subDescription={
@@ -111,28 +111,25 @@ const CarouselItems = [
 
 const HeroNew = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false })
+    Autoplay({ delay: 20000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
   return (
-    <div className="min-h-screen pt-7 lg:px-0">
-      <div className=" mx-auto h-full">
-        <Carousel
-          plugins={[plugin.current]}
-          className="w-full"
-          opts={{
-            loop: true,
-            align: "start",
-          }}
-          // onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent>
-            {CarouselItems.map((item, index) => (
-              <CarouselItem key={index}>{item.content}</CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
-    </div>
+    <Carousel
+      plugins={[plugin.current]}
+      className="w-full"
+      opts={{
+        loop: true,
+        align: "start",
+      }}
+      // onMouseEnter={plugin.current.stop}
+      // onMouseLeave={plugin.current.reset}
+    >
+      <CarouselContent>
+        {CarouselItems.map((item, index) => (
+          <CarouselItem key={index}>{item.content}</CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 };
 

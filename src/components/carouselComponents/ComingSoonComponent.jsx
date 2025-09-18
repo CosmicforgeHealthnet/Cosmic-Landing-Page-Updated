@@ -10,10 +10,10 @@ export const ComingSoonComponent = ({
 }) => {
   return (
     <div className="min-h-screen pt-7 px-4 lg:px-0">
-      <div className="max-w-[1340px] mx-auto h-full">
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-5 items-center justify-between min-h-screen py-8 lg:py-0">
+      <div className="max-w-[1100px] mx-auto h-full lg:px-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-20 lg:gap-5 items-center justify-around md:justify-between md:min-h-screen  py-8 lg:py-0">
           {/* Left Content */}
-          <div className="">
+          <div className="px-5">
             {/* Badge with subtle entrance */}
             <div
               className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-gradient-to-r from-[#F5F5F5] to-[#EEEEFF] border border-[#E0E0FF]"

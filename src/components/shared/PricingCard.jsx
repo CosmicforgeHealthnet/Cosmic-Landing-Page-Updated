@@ -44,7 +44,7 @@ export const PricingCard = ({ plan, isPopular = false }) => {
       } hover:shadow-xl transition-all duration-300`}
     >
       {isPopular && (
-        <div className="absolute -top-7 sm:-top-4 left-1/2 transform -translate-x-1/2">
+        <div className="absolute -top-4 sm:-top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-primary text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
             Most Popular
           </span>

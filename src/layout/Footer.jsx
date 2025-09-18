@@ -62,10 +62,10 @@ const Footer = () => {
   return (
     <footer className="bg-[#010F42] relative text-white overflow-hidden">
       <div className="relative z-10 max-w-[1100px] mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-12">
           {/* Logo and Description */}
           <div
-            className="lg:col-span-1"
+            className="lg:col-span-1 md:col-span-3"
             data-aos="fade-right"
             data-aos-duration="800"
             data-aos-delay="100"
@@ -249,7 +249,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <h1 className="absolute z-2  -bottom-15 left-0 font-bold text-[50px] md:text-[200px] opacity-10!">
+      <h1 className="absolute z-2  -bottom-15 left-0 font-bold text-[50px] md:text-[120px] lg:text-[150px] xl:text-[200px] opacity-10!">
         Cosmic Forge
       </h1>
     </footer>

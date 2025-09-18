@@ -35,6 +35,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { contactFormSchema } from "@/app/schema/contactFrom";
+import Image from "next/image";
 
 const ContactUsComponent = ({ isHomeScreen }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -335,7 +336,15 @@ const ContactUsComponent = ({ isHomeScreen }) => {
           {/* Contact Information */}
           <div className="space-y-8">
             {/* Contact Cards */}
-            <div
+            <div className="mx-auto w-full"></div>
+            <Image
+              src={"/contactUs/doctor.png"}
+              width={600}
+              height={400}
+              className="max-w-[600px] w-[400px] md:w-[600px]"
+            />
+
+            {/* <div
               className="space-y-6"
               data-aos="fade-left"
               data-aos-duration="800"
@@ -371,7 +380,7 @@ const ContactUsComponent = ({ isHomeScreen }) => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Emergency Notice */}

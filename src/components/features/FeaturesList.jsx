@@ -97,7 +97,7 @@ function FeaturesList({ setStep, setSelectedFeature }) {
 
   return (
     <motion.section
-      className="max-w-[1100px] grid md:grid-cols-2 gap-5 mx-auto px-4 mt-20 mb-20 overflow-hidden"
+      className="max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 mx-auto px-4 mt-20 mb-20 overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -108,7 +108,7 @@ function FeaturesList({ setStep, setSelectedFeature }) {
           key={feature.id}
           variants={cardVariants}
           // onClick={() => handleFeatureSelect(feature)}
-          className="cursor-pointer sm:h-[300px] h-[400px] w-[500px] sm:w-[400px] md:h-[350px] md:w-[350px] lg:h-[500px] lg:w-[450px] xl:h-[400px] xl:w-[500px] relative overflow-hidden space-x-2 backdrop-blur-2xl bg-gradient-to-bl to-60% from-20% from-white to-[#9096F829] border-r-0 border-[#DBDDF5] border-l-3 border-b-3 rounded-2xl px-4"
+          className="group cursor-pointer relative overflow-hidden bg-gradient-to-bl to-60% from-20% from-white to-[#9096F829] border-r-0 border-[#DBDDF5] border-l-4 border-b-4 rounded-2xl min-h-[350px] pb-6"
           whileHover={{
             x: -5,
             boxShadow: "0 20px 40px rgba(144, 150, 248, 0.15)",
@@ -127,67 +127,81 @@ function FeaturesList({ setStep, setSelectedFeature }) {
         >
           {/* Animated blur effect */}
           <motion.div
-            className="h-full w-2/5 bg-[#08109C66] absolute z-10 -right-10 blur-xl border"
+            className="absolute top-0 right-0 w-[80%] h-1/2 bg-[#08109C66] blur-xl z-10"
             variants={blurVariants}
             initial="hidden"
             animate="visible"
           />
 
-          <div className="absolute -top-5 -right-2  w-[450px] h-[250px] overflow-hidden">
-            {/* Animated image */}
+          {/* Image container with responsive positioning */}
+          <div className="absolute top-0 right-0 w-[90%] h-[40%] md:h-[40%] lg:h-1/2 overflow-hidden rounded-bl-2xl z-20">
             <motion.img
               src={feature.img}
-              alt=""
-              className="rounded-bl-2xl w-full h-full  object-cover"
+              alt={feature.title}
+              className="w-full h-full object-cover transition-transform duration-300"
               variants={imageVariants}
               initial="hidden"
               animate="visible"
               whileHover={{
                 scale: 1.05,
-                rotate: 2,
+                rotate: 1,
                 transition: { duration: 0.3 },
               }}
             />
           </div>
 
-          {/* Animated text content */}
+          {/* Content container - positioned to allow card expansion */}
           <motion.div
-            className="bottom-3 absolute"
+            className="relative z-30 mt-[55%] p-4 sm:p-6"
             variants={textVariants}
             initial="hidden"
             animate="visible"
           >
-            <motion.h1
-              className="font-semibold text-3xl text-primary"
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.2 },
-              }}
-            >
-              {feature.title}
-            </motion.h1>
-            <motion.p
-              className="max-w-[80%] md:max-w-[90%]"
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  delay: 0.5,
-                  duration: 0.6,
-                },
-              }}
-            >
-              {feature.subtitle}
-            </motion.p>
+            <div className="space-y-3 sm:space-y-4">
+              <motion.h1
+                className="font-semibold text-xl sm:text-2xl lg:text-3xl text-primary leading-tight"
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 },
+                }}
+              >
+                {feature.title}
+              </motion.h1>
+              <motion.p
+                className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-[90%]"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.5,
+                    duration: 0.6,
+                  },
+                }}
+              >
+                {feature.subtitle}
+              </motion.p>
+            </div>
           </motion.div>
+
+          {/* Decorative gradient overlay for better text readability */}
+          <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white/90 via-white/60 to-transparent pointer-events-none z-10" />
 
           {/* Subtle animated border glow on hover */}
           <motion.div
-            className="absolute inset-0 rounded-2xl border-2 border-transparent"
+            className="absolute inset-0 rounded-2xl border-2 border-transparent pointer-events-none"
             whileHover={{
               borderColor: "rgba(144, 150, 248, 0.3)",
               boxShadow: "inset 0 0 20px rgba(144, 150, 248, 0.1)",
               transition: { duration: 0.3 },
+            }}
+          />
+
+          {/* Interactive hover indicator */}
+          <motion.div
+            className="absolute top-4 left-4 w-3 h-3 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+            whileHover={{
+              scale: 1.2,
+              boxShadow: "0 0 20px rgba(144, 150, 248, 0.6)",
             }}
           />
         </motion.div>

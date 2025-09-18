@@ -11,11 +11,16 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileUseCasesOpen, setIsMobileUseCasesOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState();
+
+  // get current path
+  const pathname = usePathname();
 
   // Handle scroll effect
   useEffect(() => {
@@ -70,7 +75,8 @@ const Header = () => {
     },
   ];
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (index) => {
+    setActiveTab(index);
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -147,14 +153,14 @@ const Header = () => {
             {/* Desktop CTA Button - Hidden on mobile/tablet */}
             <Link
               href="https://dashboard.cosmicforge-healthnet.com/auth/login"
-              className="hidden lg:block bg-transparent text-[#272EA7] px-4 xl:px-6 py-2 xl:py-3 rounded-[10px] text-sm xl:text-base font-semibold hover:text-indigo-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
+              className="hidden lg:block bg-transparent text-[#272EA7] px-4 xl:px-6 py-2 xl:py-3 rounded-full text-sm xl:text-base font-semibold hover:text-indigo-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
             >
               Login
             </Link>
 
             <Link
               href="https://dashboard.cosmicforge-healthnet.com/auth/register"
-              className="hidden lg:block bg-[#272EA7] text-white px-4 xl:px-6 py-2 xl:py-3 rounded-[10px] text-sm xl:text-base font-semibold hover:bg-indigo-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
+              className="hidden lg:block bg-[#272EA7] text-white px-4 xl:px-6 py-2 xl:py-3 rounded-full text-sm xl:text-base font-semibold hover:bg-indigo-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
             >
               Get Started
             </Link>
@@ -212,22 +218,25 @@ const Header = () => {
 
           {/* Mobile Menu Content */}
           <div className="p-4 sm:p-6 space-y-1 overflow-y-auto pb-24">
-            {navItems.map((item, index) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={toggleMobileMenu}
-                className={`group flex items-center justify-between p-3 sm:p-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 transform hover:translate-x-2 ${
-                  index === 0 ? "bg-indigo-50 border border-indigo-100" : ""
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <span className="text-gray-700 text-sm sm:text-base font-medium group-hover:text-[#272EA7] transition-colors duration-200">
-                  {item.name}
-                </span>
-                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#272EA7] transform group-hover:translate-x-1 transition-all duration-200" />
-              </Link>
-            ))}
+            {navItems.map((item, index) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={toggleMobileMenu}
+                  className={`group flex items-center justify-between p-3 sm:p-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 transform hover:translate-x-2 ${
+                    isActive ? "bg-indigo-50 border border-indigo-100" : ""
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <span className="text-gray-700 text-sm sm:text-base font-medium group-hover:text-[#272EA7] transition-colors duration-200">
+                    {item.name}
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#272EA7] transform group-hover:translate-x-1 transition-all duration-200" />
+                </Link>
+              );
+            })}
 
             {/* Mobile Use Cases */}
             <div>
@@ -253,26 +262,31 @@ const Header = () => {
                     : "max-h-0 opacity-0 overflow-hidden"
                 }`}
               >
-                {useCases.map((useCase, index) => (
-                  <Link
-                    key={useCase.title}
-                    href={useCase.href}
-                    onClick={toggleMobileMenu}
-                    className="block p-2 sm:p-3 rounded-lg hover:bg-indigo-50 transition-colors duration-200"
-                    style={{
-                      animationDelay: `${
-                        (index + navItems.length + 1) * 100
-                      }ms`,
-                    }}
-                  >
-                    <div className="text-sm font-medium text-[#272EA7]">
-                      {useCase.title}
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1 leading-relaxed">
-                      {useCase.description}
-                    </div>
-                  </Link>
-                ))}
+                {useCases.map((useCase, index) => {
+                  const isActive = pathname === useCase.href;
+                  return (
+                    <Link
+                      key={useCase.title}
+                      href={useCase.href}
+                      onClick={toggleMobileMenu}
+                      className={`block p-2 sm:p-3 rounded-lg hover:bg-indigo-50 transition-colors duration-200 ${
+                        isActive ? "bg-indigo-50 border border-indigo-100" : ""
+                      }`}
+                      style={{
+                        animationDelay: `${
+                          (index + navItems.length + 1) * 100
+                        }ms`,
+                      }}
+                    >
+                      <div className="text-sm font-medium text-[#272EA7]">
+                        {useCase.title}
+                      </div>
+                      <div className="text-xs text-gray-500 mt-1 leading-relaxed">
+                        {useCase.description}
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -282,7 +296,7 @@ const Header = () => {
             <Link
               href="https://dashboard.cosmicforge-healthnet.com/auth/register"
               onClick={toggleMobileMenu}
-              className="w-full bg-[#272EA7] text-white py-3 px-4 rounded-2xl text-sm sm:text-base font-semibold hover:bg-indigo-700 transition-all duration-300 hover:shadow-xl flex items-center justify-center space-x-2"
+              className="w-full bg-[#272EA7] text-white py-3 px-4 rounded-full text-sm sm:text-base font-semibold hover:bg-indigo-700 transition-all duration-300 hover:shadow-xl flex items-center justify-center space-x-2"
             >
               <span>Get Started</span>
               <ChevronRight className="w-4 h-4" />

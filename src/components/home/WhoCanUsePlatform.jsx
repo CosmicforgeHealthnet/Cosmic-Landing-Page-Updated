@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function WhoCanUsePlatform() {
@@ -27,7 +28,7 @@ function WhoCanUsePlatform() {
                 data-aos-delay="400"
               >
                 <h2 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
-                  Who can use Our
+                  Who can use Our{" "}
                   <span className="text-[#9096F8]">
                     Platform<span className="text-[#03C800]">.</span>
                   </span>
@@ -49,25 +50,23 @@ function WhoCanUsePlatform() {
 
               {/* CTA Buttons */}
               <div
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4  justify-center lg:justify-start"
                 data-aos="fade-up"
                 data-aos-duration="600"
                 data-aos-delay="800"
               >
-                <a
-                  target="_blank"
-                  className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 sm:px-8 lg:px-[40px] py-3 sm:py-[14px] rounded-sm font-semibold hover:bg-white/30 transition-all duration-300 text-center text-sm sm:text-base"
-                  // href="https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=doctor"
+                <Link
+                  className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 sm:px-8 lg:px-[40px] py-3 sm:py-[14px] rounded-full font-semibold hover:bg-white/30 transition-all duration-300 text-center text-sm sm:text-base"
+                  href="/use-cases/doctor"
                   data-aos="slide-right"
                   data-aos-duration="500"
                   data-aos-delay="1000"
                 >
                   Doctors
-                </a>
+                </Link>
                 <a
-                  target="_blank"
-                  className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 sm:px-8 lg:px-[40px] py-3 sm:py-[14px] rounded-sm font-semibold hover:bg-white/30 transition-all duration-300 text-center text-sm sm:text-base"
-                  // href="https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=patient"
+                  className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 sm:px-8 lg:px-[40px] py-3 sm:py-[14px] rounded-full font-semibold hover:bg-white/30 transition-all duration-300 text-center text-sm sm:text-base"
+                  href="/use-cases/patients"
                   data-aos="slide-left"
                   data-aos-duration="500"
                   data-aos-delay="1100"
@@ -84,10 +83,10 @@ function WhoCanUsePlatform() {
               data-aos-duration="800"
               data-aos-delay="500"
             >
-              <h1 className="hidden md:block absolute -right-2.5 -bottom-64 z-2 lg:text-right font-bold text-[50px] md:text-[450px] opacity-100! text-white/50">
+              <h1 className="hidden lg:block absolute -right-2.5 -bottom-64 z-2 lg:text-right font-bold text-[50px] md:text-[450px] opacity-100! text-white/50">
                 ?
               </h1>
-              <h1 className="hidden md:block absolute right-40 -bottom-72 z-10 lg:text-right font-bold text-[50px] md:text-[390px] opacity-100! text-white/50">
+              <h1 className="hidden lg:block absolute right-40 -bottom-72 z-10 lg:text-right font-bold text-[50px] md:text-[390px] opacity-100! text-white/50">
                 ?
               </h1>
               {/* Application Users Stat */}
