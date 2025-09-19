@@ -66,24 +66,24 @@ const Footer = () => {
           {/* Logo and Description */}
           <div
             className="lg:col-span-1 md:col-span-3"
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-delay="100"
+            // data-aos="fade-right"
+            // data-aos-duration="800"
+            // data-aos-delay="100"
           >
             <img
               src="/home/cosw.svg"
               className="w-[160px]"
               alt="Cosmic Logo"
-              data-aos="zoom-in"
-              data-aos-duration="600"
-              data-aos-delay="200"
+              // data-aos="zoom-in"
+              // data-aos-duration="600"
+              // data-aos-delay="200"
             />
 
             <p
               className="text-gray-300 text-sm leading-relaxed mb-6"
-              data-aos="fade-up"
-              data-aos-duration="700"
-              data-aos-delay="400"
+              // data-aos="fade-up"
+              // data-aos-duration="700"
+              // data-aos-delay="400"
             >
               Revolutionizing healthcare with cutting-edge technology and
               personalized care solutions for patients and healthcare providers
@@ -93,15 +93,15 @@ const Footer = () => {
             {/* Contact Info */}
             <div
               className="space-y-3 mb-6"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="600"
+              // data-aos="fade-up"
+              // data-aos-duration="600"
+              // data-aos-delay="600"
             >
               <div
                 className="flex items-center space-x-3 text-sm text-gray-300"
-                data-aos="slide-right"
-                data-aos-duration="500"
-                data-aos-delay="700"
+                // data-aos="slide-right"
+                // data-aos-duration="500"
+                // data-aos-delay="700"
               >
                 <Mail className="w-4 h-4 text-blue-400" />
                 <span>support@cosmicforge-healthnet.com</span>
@@ -117,9 +117,9 @@ const Footer = () => {
                      </div> */}
               <div
                 className="flex items-center space-x-3 text-sm text-gray-300"
-                data-aos="slide-right"
-                data-aos-duration="500"
-                data-aos-delay="900"
+                // data-aos="slide-right"
+                // data-aos-duration="500"
+                // data-aos-delay="900"
               >
                 <MapPin className="w-4 h-4 text-blue-400" />
                 <span>
@@ -132,9 +132,9 @@ const Footer = () => {
             {/* Social Links */}
             <div
               className="flex space-x-4 relative z-3"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="1000"
+              // data-aos="fade-up"
+              // data-aos-duration="600"
+              // data-aos-delay="1000"
             >
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;
@@ -145,9 +145,9 @@ const Footer = () => {
                     target="_blank"
                     className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
-                    data-aos="zoom-in"
-                    data-aos-duration="400"
-                    data-aos-delay={1100 + index * 100}
+                    // data-aos="zoom-in"
+                    // data-aos-duration="400"
+                    // data-aos-delay={1100 + index * 100}
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -161,15 +161,15 @@ const Footer = () => {
             ([category, links], categoryIndex) => (
               <div
                 key={category}
-                data-aos="fade-up"
-                data-aos-duration="700"
-                data-aos-delay={300 + categoryIndex * 200}
+                // data-aos="fade-up"
+                // data-aos-duration="700"
+                // data-aos-delay={300 + categoryIndex * 200}
               >
                 <h3
                   className="text-lg font-semibold mb-6 text-white"
-                  data-aos="slide-down"
-                  data-aos-duration="500"
-                  data-aos-delay={400 + categoryIndex * 200}
+                  // data-aos="slide-down"
+                  // data-aos-duration="500"
+                  // data-aos-delay={400 + categoryIndex * 200}
                 >
                   {category}
                 </h3>
@@ -177,11 +177,11 @@ const Footer = () => {
                   {links.map((link, linkIndex) => (
                     <li
                       key={link.name}
-                      data-aos="fade-left"
-                      data-aos-duration="400"
-                      data-aos-delay={
-                        500 + categoryIndex * 200 + linkIndex * 100
-                      }
+                      // data-aos="fade-left"
+                      // data-aos-duration="400"
+                      // data-aos-delay={
+                      //   500 + categoryIndex * 200 + linkIndex * 100
+                      // }
                     >
                       <a
                         href={link.href}
@@ -200,48 +200,48 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div
           className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-delay="1200"
+          // data-aos="fade-up"
+          // data-aos-duration="800"
+          // data-aos-delay="1200"
         >
           <p
             className="text-gray-400 text-sm"
-            data-aos="slide-right"
-            data-aos-duration="600"
-            data-aos-delay="1400"
+            // data-aos="slide-right"
+            // data-aos-duration="600"
+            // data-aos-delay="1400"
           >
             © 2025 CosmicForge HealthNet Limited. All rights reserved.
           </p>
           <div
             className="flex space-x-6"
-            data-aos="slide-left"
-            data-aos-duration="600"
-            data-aos-delay="1500"
+            // data-aos="slide-left"
+            // data-aos-duration="600"
+            // data-aos-delay="1500"
           >
             <a
               href="/privacy"
               className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              data-aos="fade-up"
-              data-aos-duration="400"
-              data-aos-delay="1600"
+              // data-aos="fade-up"
+              // data-aos-duration="400"
+              // data-aos-delay="1600"
             >
               Privacy Policy
             </a>
             <a
               href="/terms"
               className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              data-aos="fade-up"
-              data-aos-duration="400"
-              data-aos-delay="1700"
+              // data-aos="fade-up"
+              // data-aos-duration="400"
+              // data-aos-delay="1700"
             >
               Terms of Service
             </a>
             <a
               href="/cookies"
               className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              data-aos="fade-up"
-              data-aos-duration="400"
-              data-aos-delay="1800"
+              // data-aos="fade-up"
+              // data-aos-duration="400"
+              // data-aos-delay="1800"
             >
               Cookie Policy
             </a>

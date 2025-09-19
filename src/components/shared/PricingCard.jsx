@@ -51,6 +51,15 @@ export const PricingCard = ({ plan, isPopular = false }) => {
         </div>
       )}
 
+      {/* Commission Rate for doctors */}
+      {plan.commissionRate && (
+        <div className="absolute -top-4 sm:-top-4 left-1/2 transform -translate-x-1/2">
+          <span className="bg-primary text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
+            {plan.commissionRate}% Commission
+          </span>
+        </div>
+      )}
+
       {plan.discountPercentage > 0 && (
         <div className="absolute -top-2 -right-2">
           <span className="bg-orange-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-medium">
@@ -84,6 +93,7 @@ export const PricingCard = ({ plan, isPopular = false }) => {
             <span className="text-gray-400 line-through text-base">
               {formatPrice(plan.originalPrice, plan.currency)}
             </span>
+            {/* Commission */}
           </div>
         )}
       </div>

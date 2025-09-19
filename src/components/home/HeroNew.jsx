@@ -111,7 +111,7 @@ const CarouselItems = [
 
 const HeroNew = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 20000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
   return (
     <Carousel
