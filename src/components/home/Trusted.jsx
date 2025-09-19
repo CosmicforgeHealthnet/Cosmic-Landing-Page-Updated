@@ -6,6 +6,7 @@ const LOGOS = [
   {
     logo: (
       <Image
+        loading="lazy"
         quality={90}
         width={200}
         height={200}

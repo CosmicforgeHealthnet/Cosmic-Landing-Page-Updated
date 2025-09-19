@@ -131,7 +131,8 @@ export const ComingSoonComponent = ({
           >
             <div className="relative w-full max-w-[320px] sm:max-w-[380px] lg:w-[400px] bg-[#E6E7FD] p-2 rounded-[20px]">
               <Image
-                quality={90}
+                quality={80}
+                loading="lazy"
                 width={500}
                 height={500}
                 alt="pharmacy coming soon"

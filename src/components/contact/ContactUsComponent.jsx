@@ -338,6 +338,8 @@ const ContactUsComponent = ({ isHomeScreen }) => {
             {/* Contact Cards */}
             <div className="mx-auto w-full"></div>
             <Image
+              quality={80}
+              loading="lazy"
               src={"/contactUs/doctor.png"}
               width={600}
               height={400}

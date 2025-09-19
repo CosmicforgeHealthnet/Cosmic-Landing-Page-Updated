@@ -139,6 +139,7 @@ export default function HealthcareSlider() {
                   {/* <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20 z-10" /> */}
 
                   <Image
+                    loading="lazy"
                     src={slides[currentSlide].image}
                     alt={slides[currentSlide].alt}
                     fill
@@ -270,6 +271,7 @@ export default function HealthcareSlider() {
             return (
               <div key={slide.id} className="hidden">
                 <Image
+                  loading="lazy"
                   src={slide.image}
                   alt={slide.alt}
                   width={1200}
