@@ -7,6 +7,7 @@ import PricingSection from "@/components/home/Pricing";
 import SpecialistSection from "@/components/home/Specialists";
 import { LogoCloudSimple } from "@/components/home/Trusted";
 import WhoCanUsePlatform from "@/components/home/WhoCanUsePlatform";
+import WaitListComponent from "@/components/waitListForm/waitListComponent";
 import React from "react";
 
 const HomePage = () => {
@@ -17,6 +18,7 @@ const HomePage = () => {
       <SpecialistSection />
       <HealthcareCTASection />
       <WhoCanUsePlatform />
+        <WaitListComponent />
       <PricingSection />
       <FAQSection />
       <LogoCloudSimple />
