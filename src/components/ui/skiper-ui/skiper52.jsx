@@ -68,9 +68,7 @@ const Skiper52 = () => {
 export { Skiper52 };
 
 const HoverExpand_001 = ({ images, className }) => {
-  const [activeImage, setActiveImage] = useState(
-    Math.floor(Math.random() * images.length)
-  );
+  const [activeImage, setActiveImage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   // Check if device is mobile
@@ -201,9 +199,9 @@ const HoverExpand_001 = ({ images, className }) => {
                       <p className="text-left text-medium text-white/90">
                         {image.description}
                       </p>
-                      <p className="text-left text-xs text-white/50">
+                      {/* <p className="text-left text-xs text-white/50">
                         {image.code}
-                      </p>
+                      </p> */}
                     </motion.div>
                   )}
                 </AnimatePresence>
