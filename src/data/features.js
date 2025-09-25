@@ -71,7 +71,7 @@ export const Features = [
     title: "Telemedicine",
     img: "/featuresImg/TeleMed.jpg",
     subtitle:
-      "We provide secure video consultations, audio conference calling, real time chats and remote monitoring. you can connect with your doctor from anywhere while maintaining the quality of an in person visit.",
+      "See your doctor from anywhere with video, audio, chat, and remote monitoring that feels just like an in-person visit.",
     description: {
       paragraphs: [
         {
@@ -102,7 +102,7 @@ export const Features = [
     title: "Patient Management",
     img: "/featuresImg/PatMg.jpg",
     subtitle:
-      "We centralize your medical history, prescriptions, hospitalizations and vaccination records in one place. We ensure continuity of care and make it easier for providers to access accurate information. ",
+      "Your entire medical history, prescriptions, hospital stays, and vaccinations in one secure place always ready when you need it. ",
     description: {
       paragraphs: [
         {
@@ -130,10 +130,17 @@ export const Features = [
   },
   {
     id: 3,
+    title: "Pharmacy",
+    img: "/featuresImg/pharmacy.jpg",
+    subtitle:
+      "Prescriptions connect directly to partner pharmacies for fast orders, easy tracking, and timely patient updates.",
+  },
+  {
+    id: 3,
     title: "Lab",
     img: "/featuresImg/Lab.jpg",
     subtitle:
-      "We simplify lab processes with digital test orders, result entry, and direct sharing with patients to shorten the turnaround time for critical results.",
+      "Skip the delays with digital test orders, faster results, and instant sharing between labs, doctors, and patients.",
     description: {
       paragraphs: [
         {
@@ -160,7 +167,7 @@ export const Features = [
     title: "Medical Tour",
     img: "/featuresImg/medTour.jpg",
     subtitle:
-      "We support patients traveling for care with our Partners. You track every stage, from departure to recovery, with full visibility for patients.",
+      "Traveling for care is seamless, track every stage of your journey from departure to recovery with full transparency.",
     description: {
       paragraphs: [
         {
@@ -187,7 +194,7 @@ export const Features = [
     title: "AI Tools Feature",
     img: "/featuresImg/AiTools.jpg",
     subtitle:
-      "We bring intelligence into care delivery. Patients use AI symptom checkers for early insights, and Doctors benefit from AI-supported diagnosis, pattern detection, and treatment recommendations based on patient data.",
+      "Smarter care at your fingertips, AI checks symptoms, supports diagnosis, and recommends treatments based on real data.",
     description: {
       paragraphs: [
         {
@@ -214,7 +221,7 @@ export const Features = [
     title: "AR VR Feature",
     img: "/featuresImg/ArVr.jpg",
     subtitle:
-      "We enhance consultations with immersive technology. Doctors explain conditions more clearly, and patients understand care plans through interactive visual experiences.",
+      "Step inside your care plan with immersive visuals that make medical explanations clearer and easier to understand.",
     description: {
       paragraphs: [
         {
@@ -241,7 +248,7 @@ export const Features = [
     title: "Virtual Communities",
     img: "/featuresImg/vidCall.jpg",
     subtitle:
-      "We create trusted spaces where patients and doctors connect, share experiences, and exchange knowledge. Our communities ensure collaboration, education, and support beyond clinical visits.",
+      "Join trusted spaces where patients and doctors connect, learn, and support each other beyond hospital walls.",
     description: {
       paragraphs: [
         {

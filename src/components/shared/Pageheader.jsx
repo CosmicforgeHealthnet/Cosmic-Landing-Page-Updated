@@ -1,18 +1,20 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const PageHeader = ({
   title,
   styledTitle,
   subtitle,
   gradient = "from-blue-400 via-purple-400 to-green-300",
-  titleSize = "text-[60px] lg:text-[140px]",
+  titleSize = "text-[40px] lg:text-[140px]",
   subtitleSize = "text-lg lg:text-xl",
   height = "h-64 lg:h-80",
   titleColor = "text-white/20",
   subtitleColor = "text-white",
   className = "",
+  image = "/featuresImg/Hand_Plus.png",
   backButton,
 }) => {
   const canvasRef = useRef(null);
@@ -54,13 +56,13 @@ const PageHeader = ({
   }, []);
 
   return (
-    <header className="bg-[#091D75] border-b border-b-gray-100 relative h-[300px] overflow-hidden">
+    <header className="bg-[#091D75] border-b border-b-gray-100 relative h-[150px] md:h-[300px] overflow-hidden relative">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ mixBlendMode: "overlay" }}
       />
-      <div className="bg-[#9096F8] w-[120px] h-[120px] md:w-[400px] md:h-[400px] blur-[100px] absolute top-[50%] right-[-15rem]"></div>
+      {/* <div className="bg-[#9096F8] w-[120px] h-[120px] md:w-[400px] md:h-[400px] blur-[100px] absolute top-[50%] right-[-15rem]"></div> */}
       {/* <div className="bg-[#03C800] w-[120px]  h-[120px] md:w-[400px] md:h-[400px] blur-[100px] absolute top-0 right-[-8rem]"></div> */}
 
       <div className="h-full flex items-center mx-auto w-full  ">
@@ -83,6 +85,16 @@ const PageHeader = ({
             </Button>
           )}
         </div>
+        {image && (
+          <div className="absolute right-0 -bottom-1 md:-bottom-3">
+            <Image
+              src={image}
+              width={100}
+              height={200}
+              className="w-[100px] md:w-[200px]"
+            />
+          </div>
+        )}
       </div>
     </header>
   );

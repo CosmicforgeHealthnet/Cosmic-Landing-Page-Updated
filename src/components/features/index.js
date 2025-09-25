@@ -19,8 +19,9 @@ const FeaturesIndex = () => {
     <div>
       {step == "features-list" ? (
         <PageHeader
-          title={`Our Features`}
+          title={`Our Featuress`}
           gradient="from-blue-400 via-purple-400 to-green-300"
+          image={"/featuresImg/Hand_Plus.png"}
         />
       ) : (
         <PageHeader

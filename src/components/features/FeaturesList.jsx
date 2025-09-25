@@ -134,7 +134,7 @@ function FeaturesList({ setStep, setSelectedFeature }) {
           />
 
           {/* Image container with responsive positioning */}
-          <div className="absolute top-0 right-0 w-[90%] h-[40%] md:h-[40%] lg:h-1/2 overflow-hidden rounded-bl-2xl z-20">
+          <div className="absolute top-0 right-0 w-[95%] h-[55%] md:h-[40%] lg:h-[60%] overflow-hidden rounded-bl-2xl z-20">
             <motion.img
               src={feature.img}
               alt={feature.title}

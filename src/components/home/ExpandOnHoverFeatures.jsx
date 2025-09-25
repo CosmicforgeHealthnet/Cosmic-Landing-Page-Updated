@@ -9,7 +9,7 @@ const images = [
     alt: "Telemedicine Feature",
     title: "Telemedicine",
     description:
-      "We provide secure video consultations, audio conference calling, real time chats and remote monitoring. you can connect with your doctor from anywhere while maintaining the quality of an in person visit.",
+      "See your doctor from anywhere with video, audio, chat, and remote monitoring that feels just like an in-person visit.",
     code: "# 23",
   },
   {
@@ -17,7 +17,7 @@ const images = [
     alt: "Patient Management Feature",
     title: "Patient Management",
     description:
-      "We centralize your medical history, prescriptions, hospitalizations and vaccination records in one place. We ensure continuity of care and make it easier for providers to access accurate information. ",
+      "Your entire medical history, prescriptions, hospital stays, and vaccinations in one secure place always ready when you need it. ",
     code: "# 23",
   },
   {
@@ -25,7 +25,7 @@ const images = [
     alt: "Pharmacy Feature",
     title: "Pharmacy",
     description:
-      "We link prescriptions directly to partner pharmacies. Patients receive timely updates, while pharmacies manage orders, inventory, and patient notifications in a secure system.",
+      "Prescriptions connect directly to partner pharmacies for fast orders, easy tracking, and timely patient updates.",
     code: "# 23",
   },
   {
@@ -33,7 +33,7 @@ const images = [
     alt: "Lab Feature",
     title: "Lab",
     description:
-      "We simplify lab processes with digital test orders, result entry, and direct sharing with patients to shorten the turnaround time for critical results.",
+      "Skip the delays with digital test orders, faster results, and instant sharing between labs, doctors, and patients.",
     code: "# 23",
   },
   {
@@ -41,7 +41,7 @@ const images = [
     alt: "Medical Tour Feature",
     title: "Medical Tour",
     description:
-      "We support patients traveling for care with our Partners. You track every stage, from departure to recovery, with full visibility for patients.",
+      "Traveling for care is seamless, track every stage of your journey from departure to recovery with full transparency.",
     code: "# 23",
   },
   {
@@ -49,7 +49,7 @@ const images = [
     alt: "AI Tools Feature",
     title: "AI Tools",
     description:
-      "We bring intelligence into care delivery. Patients use AI symptom checkers for early insights, and Doctors benefit from AI-supported diagnosis, pattern detection, and treatment recommendations based on patient data.",
+      "Smarter care at your fingertips, AI checks symptoms, supports diagnosis, and recommends treatments based on real data.",
     code: "# 23",
   },
   {
@@ -57,7 +57,7 @@ const images = [
     alt: "AR VR Features",
     title: "AR VR",
     description:
-      "We enhance consultations with immersive technology. Doctors explain conditions more clearly, and patients understand care plans through interactive visual experiences.",
+      "Step inside your care plan with immersive visuals that make medical explanations clearer and easier to understand.",
     code: "# 23",
   },
   {
@@ -65,7 +65,7 @@ const images = [
     alt: "Virtual Communities Features",
     title: "Virtual Communities",
     description:
-      "We create trusted spaces where patients and doctors connect, share experiences, and exchange knowledge. Our communities ensure collaboration, education, and support beyond clinical visits.",
+      "Join trusted spaces where patients and doctors connect, learn, and support each other beyond hospital walls.",
     code: "# 23",
   },
 ];
@@ -106,12 +106,9 @@ export const ExpandOnHoverFeatures = () => {
           </div>
         </div>
       </div>
-      <HoverExpand_001
-        images={images.slice(0, getImageCount())}
-        className={"mt-8 mb-8"}
-      />
-      {screenSize == "md" ? (
-        // Show last 4 items
+      <HoverExpand_001 images={images} className={"mt-8 mb-8"} />
+      {/* {screenSize == "md" ? (
+        
         <HoverExpand_001 images={images.slice(-4)} className={"mt-8 mb-8"} />
       ) : (
         screenSize == "xs" && (
@@ -120,14 +117,14 @@ export const ExpandOnHoverFeatures = () => {
               images={images.slice(3, 6)}
               className={"mt-8 mb-8"}
             />
-            {/* show last tow items */}
+            
             <HoverExpand_001
               images={images.slice(-2)}
               className={"mt-8 mb-8"}
             />
           </>
         )
-      )}
+      )} */}
     </div>
   );
 };
