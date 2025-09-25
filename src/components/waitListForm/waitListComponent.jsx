@@ -236,20 +236,20 @@ const WaitListComponent = () => {
                             disabled={isSubmitting}
                         />
 
-                        <select
-                            name="role"
-                            value={formData.role}
-                            onChange={handleInputChange}
-                            className="bg-[#272EA726] text-[#272EA7] backdrop-blur-sm border-[#272EA726] rounded-lg h-12 w-full px-3 appearance-none cursor-pointer disabled:opacity-50"
-                            disabled={isSubmitting}
-                        >
-                            <option value="">Select Your Role</option>
-                            <option value="pharmacist">Pharmacist</option>
-                            <option value="lab-technician">Lab Technician</option>
-                            {/*<option value="facility-manager">Facility Manager</option>*/}
-                            {/*<option value="healthcare-admin">Healthcare Administrator</option>*/}
-                            <option value="other">Other Healthcare Professional</option>
-                        </select>
+                        {/*<select*/}
+                        {/*    name="role"*/}
+                        {/*    value={formData.role}*/}
+                        {/*    onChange={handleInputChange}*/}
+                        {/*    className="bg-[#272EA726] text-[#272EA7] backdrop-blur-sm border-[#272EA726] rounded-lg h-12 w-full px-3 appearance-none cursor-pointer disabled:opacity-50"*/}
+                        {/*    disabled={isSubmitting}*/}
+                        {/*>*/}
+                        {/*    <option value="">Select Your Role</option>*/}
+                        {/*    <option value="pharmacist">Pharmacist</option>*/}
+                        {/*    <option value="lab-technician">Lab Technician</option>*/}
+                        {/*    /!*<option value="facility-manager">Facility Manager</option>*!/*/}
+                        {/*    /!*<option value="healthcare-admin">Healthcare Administrator</option>*!/*/}
+                        {/*    <option value="other">Other Healthcare Professional</option>*/}
+                        {/*</select>*/}
 
                         <button
                             type="button"
