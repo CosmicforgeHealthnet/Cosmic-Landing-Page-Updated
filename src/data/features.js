@@ -131,7 +131,7 @@ export const Features = [
   {
     id: 3,
     title: "Pharmacy",
-    img: "/featuresImg/pharmacy.jpg",
+    img: "/featuresImg/Pharmacy.jpg",
     subtitle:
       "Prescriptions connect directly to partner pharmacies for fast orders, easy tracking, and timely patient updates.",
   },
