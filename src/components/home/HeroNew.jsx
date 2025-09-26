@@ -23,17 +23,6 @@ const CarouselItems = [
         }
       />
     ),
-    // (
-    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
-    //     <Image
-    //       src={slides[0].image}
-    //       alt={slides[0].alt}
-    //       fill
-    //       className="object-contain md:object-contain h-full w-full"
-    //       quality={90}
-    //     />
-    //   </div>
-    // ),
   },
   {
     id: "ad2",
@@ -47,17 +36,6 @@ const CarouselItems = [
         }
       />
     ),
-    //  (
-    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
-    //     <Image
-    //       src={slides[1].image}
-    //       alt={slides[1].alt}
-    //       fill
-    //       className="object-contain md:object-contain h-full w-full"
-    //       quality={90}
-    //     />
-    //   </div>
-    // ),
   },
   {
     id: "ad3",
@@ -71,17 +49,6 @@ const CarouselItems = [
         }
       />
     ),
-    //  (
-    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border md:border-white/10">
-    //     <Image
-    //       src={slides[2].image}
-    //       alt={slides[2].alt}
-    //       fill
-    //       className="object-contain md:object-contain h-full w-full"
-    //       quality={90}
-    //     />
-    //   </div>
-    // ),
   },
   {
     id: "ad4",
@@ -95,23 +62,12 @@ const CarouselItems = [
         }
       />
     ),
-    // (
-    //   <div className="relative w-full h-full  overflow-hidden shadow-2xl  md:border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:border-white/10">
-    //     <Image
-    //       src={slides[3].image}
-    //       alt={slides[3].alt}
-    //       fill
-    //       className="object-contain md:object-contain h-full w-full"
-    //       quality={90}
-    //     />
-    //   </div>
-    // ),
   },
 ];
 
 const HeroNew = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
   return (
     <Carousel

@@ -85,7 +85,7 @@ export const Hero = () => {
                   </h1>
                   <p className="text-[13px] sm:text-[14px] text-text">
                     Charge exactly what your expertise is worth—update
-                    consultation fees in seconds and keep 100% of your earnings.
+                    consultation fees in seconds and keep your earnings.
                   </p>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export const Hero = () => {
                           <div className="flex items-center gap-2">
                             <div className="w-2 h-2 bg-green-400 rounded-full shadow-lg shadow-green-400/50"></div>
                             <p className="text-gray-700 text-[10px] sm:text-xs lg:text-sm">
-                              Current online
+                              Online
                             </p>
                           </div>
                         </div>
