@@ -155,13 +155,11 @@ const WaitListComponent = () => {
                                 color: "#0A13B5",
                             }}
                         >
-                            <div className="text-center whitespace-nowrap">
+                            <div className="text-center">
                                 Digitize Your Facility. Grow With Us. Strengthen Your Impact.
                             </div>
-                            <div className="flex justify-center">
-                                <span className="whitespace-nowrap translate-x-20">
-                                    Let's Build the Future of Healthcare Together!
-                                </span>
+                            <div className="text-center mt-2">
+                                Let's Build the Future of Healthcare Together!
                             </div>
                         </h1>
 
@@ -181,11 +179,10 @@ const WaitListComponent = () => {
                             }}
                         >
                             Join the first wave of forward-thinking pharmacists and labs shaping the future
-                            of connected healthcare, <br />
+                            of connected healthcare, <br className="hidden sm:block" />
                             where your facility becomes part of a trusted network designed to reach more patients.
                         </p>
                     </div>
-
                     {/* Profile Images */}
                     <div className="flex justify-center">
                         <Image
@@ -236,20 +233,20 @@ const WaitListComponent = () => {
                             disabled={isSubmitting}
                         />
 
-                        <select
-                            name="role"
-                            value={formData.role}
-                            onChange={handleInputChange}
-                            className="bg-[#272EA726] text-[#272EA7] backdrop-blur-sm border-[#272EA726] rounded-lg h-12 w-full px-3 appearance-none cursor-pointer disabled:opacity-50"
-                            disabled={isSubmitting}
-                        >
-                            <option value="">Select Your Role</option>
-                            <option value="pharmacist">Pharmacist</option>
-                            <option value="lab-technician">Lab Technician</option>
-                            {/*<option value="facility-manager">Facility Manager</option>*/}
-                            {/*<option value="healthcare-admin">Healthcare Administrator</option>*/}
-                            <option value="other">Other Healthcare Professional</option>
-                        </select>
+                        {/*<select*/}
+                        {/*    name="role"*/}
+                        {/*    value={formData.role}*/}
+                        {/*    onChange={handleInputChange}*/}
+                        {/*    className="bg-[#272EA726] text-[#272EA7] backdrop-blur-sm border-[#272EA726] rounded-lg h-12 w-full px-3 appearance-none cursor-pointer disabled:opacity-50"*/}
+                        {/*    disabled={isSubmitting}*/}
+                        {/*>*/}
+                        {/*    <option value="">Select Your Role</option>*/}
+                        {/*    <option value="pharmacist">Pharmacist</option>*/}
+                        {/*    <option value="lab-technician">Lab Technician</option>*/}
+                        {/*    /!*<option value="facility-manager">Facility Manager</option>*!/*/}
+                        {/*    /!*<option value="healthcare-admin">Healthcare Administrator</option>*!/*/}
+                        {/*    <option value="other">Other Healthcare Professional</option>*/}
+                        {/*</select>*/}
 
                         <button
                             type="button"
