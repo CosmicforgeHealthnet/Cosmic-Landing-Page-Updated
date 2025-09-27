@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { CheckCircle, Loader2, X } from "lucide-react";
-import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const WaitListComponent = () => {
     const [formData, setFormData] = useState({
@@ -277,179 +277,97 @@ const WaitListComponent = () => {
             }}
         >
             <style jsx global>{`
-                .PhoneInput {
+                .react-tel-input {
+                    font-family: "Poppins", sans-serif;
+                    width: 100% !important;
+                }
+
+                .react-tel-input .form-control {
+                    width: 100% !important;
                     background: rgba(39, 46, 167, 0.15) !important;
                     backdrop-filter: blur(10px) !important;
                     border: 1px solid rgba(39, 46, 167, 0.15) !important;
                     border-radius: 0.5rem !important;
                     height: 3rem !important;
-                    padding: 0 0.75rem !important;
-                    display: flex !important;
-                    align-items: center !important;
-                    width: 100% !important;
-                }
-                
-                .PhoneInput input {
-                    background: transparent !important;
-                    border: none !important;
-                    outline: none !important;
-                    color: #272EA7 !important;
                     font-size: 0.875rem !important;
-                    width: 100% !important;
-                    height: 100% !important;
-                    padding-left: 0.5rem !important;
+                    color: #272EA7 !important;
+                    padding-left: 56px !important;
                 }
-                
-                .PhoneInput input::placeholder {
+
+                .react-tel-input .form-control::placeholder {
                     color: rgba(39, 46, 167, 0.6) !important;
                     opacity: 1 !important;
                 }
-                
-                .PhoneInput select {
-                    background: transparent !important;
-                    border: none !important;
-                    color: #272EA7 !important;
-                    font-size: 0.875rem !important;
-                    margin-right: 0.5rem !important;
-                    cursor: pointer !important;
-                }
-                
-                .PhoneInput:focus-within {
+
+                .react-tel-input .form-control:focus {
                     border-color: #272EA7 !important;
                     box-shadow: 0 0 0 1px #272EA7 !important;
                 }
-                
-                .PhoneInputCountry {
-                    margin-right: 0.75rem !important;
+
+                .react-tel-input .flag-dropdown {
+                    background-color: transparent !important;
+                    border: none !important;
+                    border-radius: 0.5rem 0 0 0.5rem !important;
+                    height: 3rem !important;
+                }
+
+                .react-tel-input .selected-flag {
+                    border-radius: 0.5rem 0 0 0.5rem !important;
+                    padding: 0 0 0 12px !important;
+                    height: 100% !important;
                     display: flex !important;
                     align-items: center !important;
-                    gap: 0.25rem !important;
-                    cursor: pointer !important;
-                    padding: 2px !important;
-                    border-radius: 4px !important;
-                    transition: background-color 0.15s ease !important;
                 }
-                
-                .PhoneInputCountry:hover {
+
+                .react-tel-input .selected-flag:hover,
+                .react-tel-input .selected-flag:focus {
                     background-color: rgba(39, 46, 167, 0.1) !important;
                 }
-                
-                .PhoneInputCountryIcon {
-                    width: 24px !important;
-                    height: 16px !important;
-                    border-radius: 2px !important;
-                    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
-                    display: block !important;
-                    flex-shrink: 0 !important;
-                    overflow: hidden !important;
-                    position: relative !important;
-                }
-                
-                .PhoneInputCountryIcon img,
-                .PhoneInputCountryIconImg {
-                    width: 100% !important;
-                    height: 100% !important;
-                    object-fit: cover !important;
-                    display: block !important;
-                    border-radius: inherit !important;
-                }
-                
-                .PhoneInputCountrySelectArrow {
-                    width: 0 !important;
-                    height: 0 !important;
-                    border-left: 4px solid transparent !important;
-                    border-right: 4px solid transparent !important;
-                    border-top: 4px solid #272EA7 !important;
-                    opacity: 0.7 !important;
-                    margin-left: 0.25rem !important;
-                    transition: transform 0.15s ease !important;
-                }
-                
-                .PhoneInputCountry--open .PhoneInputCountrySelectArrow {
-                    transform: rotate(180deg) !important;
-                }
-                
-                .PhoneInput input:disabled {
-                    opacity: 0.5 !important;
-                    cursor: not-allowed !important;
-                }
-                
-                .PhoneInput select:disabled {
-                    opacity: 0.5 !important;
-                    cursor: not-allowed !important;
-                }
-                
-                .PhoneInputCountry:disabled {
-                    opacity: 0.5 !important;
-                    cursor: not-allowed !important;
-                }
-                
-                .PhoneInput--error {
-                    border-color: #ef4444 !important;
-                    box-shadow: 0 0 0 1px #ef4444 !important;
-                }
-                
-                .PhoneInputCountryDropdown {
-                    background: white !important;
-                    border: 1px solid #e5e7eb !important;
+
+                .react-tel-input .country-list {
                     border-radius: 0.5rem !important;
-                    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+                    font-size: 0.875rem !important;
+                    background: rgba(39, 46, 167, 0.08) !important;
+                    backdrop-filter: blur(10px) !important;
+                    border: 1px solid rgba(39, 46, 167, 0.15) !important;
+                    box-shadow: 0 10px 25px -5px rgba(39, 46, 167, 0.1), 0 10px 10px -5px rgba(39, 46, 167, 0.05) !important;
                     max-height: 200px !important;
                     overflow-y: auto !important;
                     z-index: 50 !important;
-                    margin-top: 4px !important;
                 }
-                
-                .PhoneInputCountryOption {
+
+                .react-tel-input .country-list .country {
                     padding: 0.5rem 0.75rem !important;
                     display: flex !important;
                     align-items: center !important;
-                    gap: 0.75rem !important;
-                    cursor: pointer !important;
+                    gap: 0.5rem !important;
+                    color: #272EA7 !important;
                     transition: background-color 0.15s ease !important;
                 }
-                
-                .PhoneInputCountryOption:hover {
-                    background: #f3f4f6 !important;
+
+                .react-tel-input .country-list .country:hover {
+                    background: rgba(39, 46, 167, 0.1) !important;
+                    color: #272EA7 !important;
                 }
-                
-                .PhoneInputCountryOption:focus {
-                    background: #e5e7eb !important;
-                    outline: none !important;
+
+                .react-tel-input .country-list .country.highlight {
+                    background: rgba(39, 46, 167, 0.15) !important;
+                    color: #272EA7 !important;
                 }
-                
-                .PhoneInputCountryOption .PhoneInputCountryIcon {
-                    margin-right: 0 !important;
+
+                .react-tel-input .country-list .country .dial-code {
+                    color: rgba(39, 46, 167, 0.7) !important;
+                    font-size: 0.8rem !important;
                 }
-                
-                .PhoneInputCountryOption .PhoneInputCountryName {
-                    color: #374151 !important;
+
+                .react-tel-input .country-list .country .country-name {
+                    color: #272EA7 !important;
                     font-size: 0.875rem !important;
                 }
-                
-                .PhoneInputCountryOption .PhoneInputCountryCallingCode {
-                    color: #6b7280 !important;
-                    font-size: 0.875rem !important;
-                    margin-left: auto !important;
-                }
-                
-                /* Ensure flags are loaded from CDN */
-                .PhoneInputCountryIcon {
-                    background-image: none !important;
-                    background-size: cover !important;
-                    background-position: center !important;
-                    background-repeat: no-repeat !important;
-                }
-                
-                /* Fallback for when images don't load */
-                .PhoneInputCountryIcon:empty::before {
-                    content: "🏳️" !important;
-                    display: block !important;
-                    width: 100% !important;
-                    height: 100% !important;
-                    font-size: 12px !important;
-                    text-align: center !important;
-                    line-height: 16px !important;
+
+                .react-tel-input--error .form-control {
+                    border-color: #ef4444 !important;
+                    box-shadow: 0 0 0 1px #ef4444 !important;
                 }
             `}</style>
 
@@ -631,15 +549,17 @@ const WaitListComponent = () => {
                             </div>
 
                             <div className="space-y-1">
-                                <div className={`${errors.phone ? 'PhoneInput--error' : ''}`}>
+                                <div className={`${errors.phone ? 'react-tel-input--error' : ''}`}>
                                     <PhoneInput
-                                        international
-                                        defaultCountry="US"
+                                        country="us"
                                         value={formData.phone}
                                         onChange={handlePhoneChange}
                                         placeholder="Phone Number (Optional)"
                                         disabled={isSubmitting}
-                                        className="custom-phone-input"
+                                        containerClass="w-full react-tel-input"
+                                        inputClass="w-full"
+                                        buttonClass="react-tel-input__flag-dropdown"
+                                        dropdownClass="font-poppins text-sm"
                                     />
                                 </div>
                                 {errors.phone && (
