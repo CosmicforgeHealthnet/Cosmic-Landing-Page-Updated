@@ -1,6 +1,19 @@
 "use client";
 import Link from "next/link";
+const DocImgs = [
+  "/heroDocImages/doc1.webp",
+  "/heroDocImages/doc2.webp",
+  "/heroDocImages/doc3.webp",
+  "/heroDocImages/doc4.webp",
+  "/heroDocImages/doc5.webp",
+  "/heroDocImages/doc7.webp",
+  "/heroDocImages/doc8.webp",
+  "/heroDocImages/doc9.webp",
+  "/heroDocImages/doc11.webp",
+  "/heroDocImages/doc12.webp",
+];
 export const Hero = () => {
+  const randomDocImage = DocImgs[Math.floor(Math.random() * DocImgs.length)];
   return (
     <div className="min-h-screen pt-7 px-4 lg:px-0">
       <div className="max-w-[1100px] mx-auto h-full">
@@ -139,7 +152,7 @@ export const Hero = () => {
                       <div className="flex items-center gap-3 lg:gap-4">
                         <div className="relative">
                           <img
-                            src="https://i.pravatar.cc/300"
+                            src={randomDocImage}
                             alt="Dr. John Doe"
                             className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover ring-4 ring-white/40"
                           />
